@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#A6CAF7',
     paddingLeft: 10,
     paddingRight: 10,
-    marginLeft: 20,
-    marginRight: 60,
+    marginLeft: 30,
+    marginRight: 80,
     marginTop: 20
     // alignItems: 'center',
     
