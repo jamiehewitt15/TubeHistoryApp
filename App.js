@@ -16,11 +16,10 @@ export default class App extends React.Component {
   }
   
   textChanged(search_word){
-    console.log(search_word);
     var new_stations = [];
     for (var i = 0; i < STATIONS.length; i++) {
-      if (STATIONS[i].name.includes(search_word)) {
-        new_stations.append(STATIONS[i])
+      if (STATIONS[i].name.toLowerCase().indexOf(search_word.toLowerCase()) == 0) {
+         new_stations.push(STATIONS[i])
       }
     }
     this.setState({stations: new_stations})
