@@ -13,6 +13,7 @@ export default class App extends React.Component {
      visible_stations.push(<Station stationName={STATIONS[i].name} 
                                     stationLines={STATIONS[i].lines} 
                                     stationZones={STATIONS[i].zones} 
+                                    stationImage={STATIONS[i].img}
                                     key={i}/>);
      
    }
