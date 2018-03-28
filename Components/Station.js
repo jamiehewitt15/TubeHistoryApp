@@ -11,16 +11,11 @@ export  default class Station extends React.Component {
   render() {
       return (
           <View>
-       <Card title={this.props.stationName} 
-       image={require('this.props.stationImage')}
-
-       >
-          <Image
-          style={{width: 50, height: 50}}
-          source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-        />
+          <Card title={this.props.stationName} image={require('../images/Aldgate.jpg')}>
+       
+          
           <Text>Lines: {this.props.stationLines} </Text>
-          <Text>Zone: {this.props.stationZones}</Text>
+          <Text>Zone: {this.props.stationZones} </Text>
           <Button title='MORE INFO'  
           buttonStyle={{
           backgroundColor: "rgba(92, 99,216, 1)",

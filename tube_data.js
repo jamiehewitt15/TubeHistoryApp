@@ -1,270 +1,1352 @@
-export const STATIONS = [{name: "Acton Town", lines: "DistrictPiccadilly",local authority: "Ealing", zones: "3", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/ActonTown1.jpg/800px-ActonTown1.jpg"},
-{name: "Aldgate", lines: "MetropolitanCircle",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Aldgate-Station-Entrance.jpg"},
-{name: "Aldgate East", lines: "Hammersmith & CityDistrict",local authority: "Tower Hamlets", zones: "1", img: "https://en.wikipedia.org/wiki/File:London_U-Bahn_Aldgate_East_Eingang.jpg"},
-{name: "Alperton", lines: "Piccadilly",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Alperton_station_building.JPG"},
-{name: "Amersham", lines: "Metropolitan",local authority: "Chiltern", zones: "9", img: "https://en.wikipedia.org/wiki/File:Amersham_Tube_Station.JPG"},
-{name: "Angel", lines: "Northern",local authority: "Islington", zones: "1", img: "https://en.wikipedia.org/wiki/File:Gb-lu-Angel-southbound.jpg"},
-{name: "Archway", lines: "Northern",local authority: "Islington", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Archway_station_side_entrance.JPG"},
-{name: "Arnos Grove", lines: "Piccadilly",local authority: "Enfield", zones: "4", img: "https://en.wikipedia.org/wiki/File:Arnos_Grove_stn_building.JPG"},
-{name: "Arsenal", lines: "Piccadilly",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Arsenal_station_entrance.JPG"},
-{name: "Baker Street", lines: "MetropolitanBakerlooCircleJubileeHammersmith & City",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:BakerStEntrance.JPG"},
-{name: "Balham", lines: "Northern",local authority: "Wandsworth", zones: "3", img: "https://en.wikipedia.org/wiki/File:Balham_station.jpg"},
-{name: "Bank", lines: "Waterloo & CityNorthernCentral",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Bank_station_westbound_Central_look_east.JPG"},
-{name: "Barbican", lines: "MetropolitanCircleHammersmith & City",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Barbican.tube.onthecircle.london.arp.jpg"},
-{name: "Barking", lines: "DistrictHammersmith & City",local authority: "Barking and Dagenham", zones: "4", img: "https://en.wikipedia.org/wiki/File:Barkinglongview.jpg"},
-{name: "Barkingside", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Barkingside_full_stn_building.JPG"},
-{name: "Barons Court", lines: "DistrictPiccadilly",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Barons-court-tube.jpg"},
-{name: "Bayswater", lines: "DistrictCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Bayswater_Station_Exterior.jpg"},
-{name: "Becontree", lines: "District",local authority: "Barking and Dagenham", zones: "5", img: "https://en.wikipedia.org/wiki/File:Becontree_station_building.JPG"},
-{name: "Belsize Park", lines: "Northern",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Belsize_Park_stn_building.JPG"},
-{name: "Bermondsey", lines: "Jubilee",local authority: "Southwark", zones: "2", img: "https://en.wikipedia.org/wiki/File:Bermondsey.jpg"},
-{name: "Bethnal Green", lines: "Central",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Bethnal_Green_stn_eastbound_look_east.JPG"},
-{name: "Blackfriars", lines: "DistrictCircle",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Blackfriars.tube.station.london.arp.jpg"},
-{name: "Blackhorse Road", lines: "Victoria",local authority: "Waltham Forest", zones: "3", img: "https://en.wikipedia.org/wiki/File:Blackhorse_Road_stn_building.JPG"},
-{name: "Bond Street", lines: "CentralJubilee",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Bond_Street_stn_Central_line_westbound.JPG"},
-{name: "Borough", lines: "Northern",local authority: "Southwark", zones: "1", img: "https://en.wikipedia.org/wiki/File:Borough_tube_station_2005-11-27.jpg"},
-{name: "Boston Manor", lines: "Piccadilly",local authority: "EalingHounslow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Boston_Manor_stn_building.JPG"},
-{name: "Bounds Green", lines: "Piccadilly",local authority: "Haringey", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:Bounds_Green_stn_building.jpg"},
-{name: "Bow Road", lines: "DistrictHammersmith & City",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Bow_Road_stn_building.JPG"},
-{name: "Brent Cross", lines: "Northern",local authority: "Barnet", zones: "3", img: "https://en.wikipedia.org/wiki/File:Brent_Cross_stn_building.JPG"},
-{name: "Brixton", lines: "Victoria",local authority: "Lambeth", zones: "2", img: "https://en.wikipedia.org/wiki/File:BrixtonTubeStation.jpg"},
-{name: "Bromley-by-Bow", lines: "DistrictHammersmith & City",local authority: "Tower Hamlets", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Bromley-by-Bow_tube_station_2005-12-10.jpg"},
-{name: "Buckhurst Hill", lines: "Central",local authority: "Epping Forest", zones: "5", img: "https://en.wikipedia.org/wiki/File:Buckhurst_Hill_stn_building.JPG"},
-{name: "Burnt Oak", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Burnt_Oak_stn_building.JPG"},
-{name: "Caledonian Road", lines: "Piccadilly",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Caledonian_Road_stn_building.JPG"},
-{name: "Camden Town", lines: "Northern",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Camden_Town_stn_building.JPG"},
-{name: "Canada Water", lines: "Jubilee",local authority: "Southwark", zones: "2", img: "https://en.wikipedia.org/wiki/File:Canada_Water_station_building.JPG"},
-{name: "Canary Wharf", lines: "Jubilee",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Canary_wharf_tube_station_750px.jpg"},
-{name: "Canning Town", lines: "Jubilee",local authority: "Newham", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Canning_Town_stn_northern_entrance.JPG"},
-{name: "Cannon Street", lines: "DistrictCircle",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:CannonStreet.jpg"},
-{name: "Canons Park", lines: "Jubilee",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Canons_Park_tube_Station.JPG"},
-{name: "Chalfont & Latimer", lines: "Metropolitan",local authority: "Chiltern", zones: "8", img: "https://en.wikipedia.org/wiki/File:Chalfont_%26_Latimer_station_building.JPG"},
-{name: "Chalk Farm", lines: "Northern",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Chalk_Farm_tube.JPG"},
-{name: "Chancery Lane", lines: "Central",local authority: "City of LondonCamden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Chancery_Lane_stn_northeast_entrance.JPG"},
-{name: "Charing Cross", lines: "BakerlooNorthern",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Charing_cross_london_underground.jpg"},
-{name: "Chesham", lines: "Metropolitan",local authority: "Chiltern", zones: "9", img: "https://en.wikipedia.org/wiki/File:Chesham_Tube_Station.jpg"},
-{name: "Chigwell", lines: "Central",local authority: "Epping Forest", zones: "4", img: "https://en.wikipedia.org/wiki/File:Chigwell_station_building.JPG"},
-{name: "Chiswick Park", lines: "District",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:ChiswickPark.jpg"},
-{name: "Chorleywood", lines: "Metropolitan",local authority: "Three Rivers", zones: "7", img: "https://en.wikipedia.org/wiki/File:Railway_station_at_Chorleywood.jpg"},
-{name: "Clapham Common", lines: "Northern",local authority: "Lambeth", zones: "2", img: "https://en.wikipedia.org/wiki/File:Clapham_Common_Tube_Station_Exterior_-_Oct_2007.jpg"},
-{name: "Clapham North", lines: "Northern",local authority: "Lambeth", zones: "2", img: "https://en.wikipedia.org/wiki/File:ClaphamNorthTube.jpg"},
-{name: "Clapham South", lines: "Northern",local authority: "Wandsworth", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:ClaphamSouthTube.jpg"},
-{name: "Cockfosters", lines: "Piccadilly",local authority: "Enfield", zones: "5", img: "https://en.wikipedia.org/wiki/File:Cockfosters_station_platform_concourse.JPG"},
-{name: "Colindale", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Colindale_station_entrance.JPG"},
-{name: "Colliers Wood", lines: "Northern",local authority: "Merton", zones: "3", img: "https://en.wikipedia.org/wiki/File:Colliers_Wood_Tube_Station_2003.jpg"},
-{name: "Covent Garden", lines: "Piccadilly",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:CoventGardenTubeStation.jpg"},
-{name: "Croxley", lines: "Metropolitan",local authority: "Three Rivers", zones: "7", img: "https://en.wikipedia.org/wiki/File:Croxley_Tube_Station_-_exterior.JPG"},
-{name: "Dagenham East", lines: "District",local authority: "Barking and Dagenham", zones: "5", img: "https://en.wikipedia.org/wiki/File:Dagenham_East_stn_building.JPG"},
-{name: "Dagenham Heathway", lines: "District",local authority: "Barking and Dagenham", zones: "5", img: "https://en.wikipedia.org/wiki/File:Dagenham_Heathway_tube_station_2005-12-10_05.jpg"},
-{name: "Debden", lines: "Central",local authority: "Epping Forest", zones: "6", img: "https://en.wikipedia.org/wiki/File:Debden_stn_east.JPG"},
-{name: "Dollis Hill", lines: "Jubilee",local authority: "Brent", zones: "3", img: "https://en.wikipedia.org/wiki/File:Dollis_Hill_tube_station_2005-12-10_02.jpg"},
-{name: "Ealing Broadway", lines: "DistrictCentral",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:EalingBroadway1.jpg"},
-{name: "Ealing Common", lines: "DistrictPiccadilly",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:EalingCommon.jpg"},
-{name: "Earl's Court", lines: "DistrictPiccadilly",local authority: "Kensington and Chelsea", zones: "1 & 2", img: "https://en.wikipedia.org/wiki/File:London_Train_Station.jpg"},
-{name: "East Acton", lines: "Central",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:East_Acton_Tube_Station.jpg"},
-{name: "East Finchley", lines: "Northern",local authority: "Barnet", zones: "3", img: "https://en.wikipedia.org/wiki/File:East_Finchley2.JPG"},
-{name: "East Ham", lines: "DistrictHammersmith & City",local authority: "Newham", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:East_ham_tube_station_london.jpg"},
-{name: "East Putney", lines: "District",local authority: "Wandsworth", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:EastPutney1.jpg"},
-{name: "Eastcote", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "5", img: "https://en.wikipedia.org/wiki/File:Eastcote_tube_station_1.jpg"},
-{name: "Edgware", lines: "Northern",local authority: "Barnet", zones: "5", img: "https://en.wikipedia.org/wiki/File:Edgware_stn.jpg"},
-{name: "Edgware Road", lines: "Bakerloo",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Edgware_Road_stn_(Bakerloo_line)_building_(cropped).png"},
-{name: "Edgware Road", lines: "Hammersmith & CityDistrictCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:EdgwareRdHammersmith.jpg"},
-{name: "Elephant & Castle", lines: "NorthernBakerloo",local authority: "Southwark", zones: "1 & 2", img: "https://en.wikipedia.org/wiki/File:Elephant_%26_Castle_stn_south_entrance.JPG"},
-{name: "Elm Park", lines: "District",local authority: "Havering", zones: "6", img: "https://en.wikipedia.org/wiki/File:Elm_Park_stn_building.JPG"},
-{name: "Embankment", lines: "DistrictBakerlooNorthernCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Embankment_station.jpg"},
-{name: "Epping", lines: "Central",local authority: "Epping Forest", zones: "6", img: "https://en.wikipedia.org/wiki/File:Epping_tube_station.JPG"},
-{name: "Euston", lines: "NorthernVictoria",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Euston_station_facade.jpg"},
-{name: "Euston Square", lines: "MetropolitanCircleHammersmith & City",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Euston_Square_stn_south_entrance.JPG"},
-{name: "Fairlop", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Fairlop_stn_building.JPG"},
-{name: "Farringdon", lines: "MetropolitanCircleHammersmith & City",local authority: "Islington", zones: "1", img: "https://en.wikipedia.org/wiki/File:Farringdon_station_exterior.jpg"},
-{name: "Finchley Central", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Finchley_Central_station.jpg"},
-{name: "Finchley Road", lines: "MetropolitanJubilee",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Finchley_Road_tube_entrance.jpg"},
-{name: "Finsbury Park", lines: "PiccadillyVictoria",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Finsbury_Park_tube_stn_entrance_Station_Place.JPG"},
-{name: "Fulham Broadway", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:FulhamBroadway2.jpg"},
-{name: "Gants Hill", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Gants_Hill_Underground.jpg"},
-{name: "Gloucester Road", lines: "DistrictPiccadillyCircle",local authority: "Kensington and Chelsea", zones: "1", img: "https://en.wikipedia.org/wiki/File:GlocesterRoadTube.jpg"},
-{name: "Golders Green", lines: "Northern",local authority: "Barnet", zones: "3", img: "https://en.wikipedia.org/wiki/File:Golders_Green_stn_building.JPG"},
-{name: "Goldhawk Road", lines: "Hammersmith & CityCircle",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Goldhawk_Road_stn_east_entrance.JPG"},
-{name: "Goodge Street", lines: "Northern",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Goodge_Street_stn_entrance.JPG"},
-{name: "Grange Hill", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Grange_Hill_stn_entr.JPG"},
-{name: "Great Portland Street", lines: "MetropolitanCircleHammersmith & City",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Great_Portland_St_Tube_Station.jpg"},
-{name: "Greenford", lines: "Central",local authority: "Ealing", zones: "4", img: "https://en.wikipedia.org/wiki/File:Greenford_station_entrance.JPG"},
-{name: "Green Park", lines: "PiccadillyVictoriaJubilee",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Green_Park_Victoria_Line_train.jpg"},
-{name: "Gunnersbury", lines: "District",local authority: "Hounslow", zones: "3", img: "https://en.wikipedia.org/wiki/File:D-stock_at_Gunnersbury.jpg"},
-{name: "Hainault", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Hainault_stn_building.JPG"},
-{name: "Hammersmith", lines: "DistrictPiccadilly",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Hammersmith_(District)_station_main_entrance.JPG"},
-{name: "Hammersmith", lines: "Hammersmith & CityCircle",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Hammersmith_(H_%26_C_line)_station_building.JPG"},
-{name: "Hampstead", lines: "Northern",local authority: "Camden", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Hampstead_station_building.JPG"},
-{name: "Hanger Lane", lines: "Central",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:Hanger_Lane_stn_building.JPG"},
-{name: "Harlesden", lines: "Bakerloo",local authority: "Brent", zones: "3", img: "https://en.wikipedia.org/wiki/File:Harlesden.jpg"},
-{name: "Harrow & Wealdstone", lines: "Bakerloo",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Harrow_%26_Wealdstone_main_building.JPG"},
-{name: "Harrow-on-the-Hill", lines: "Metropolitan",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Harrow-on-the-Hill_stn_north_entrance.JPG"},
-{name: "Hatton Cross", lines: "Piccadilly",local authority: "Hillingdon", zones: "5 & 6", img: "https://en.wikipedia.org/wiki/File:Hatton_Cross_Tube_Station.JPG"},
-{name: "Heathrow Terminals 2 & 3", lines: "Piccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Heathrow_Terms_123_entrance.JPG"},
-{name: "Heathrow Terminal 4", lines: "Piccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Heathrow_Terminal_4_tube_entrance.JPG"},
-{name: "Heathrow Terminal 5", lines: "Piccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Heathrow_Terminal_5_Underground_entrance.JPG"},
-{name: "Hendon Central", lines: "Northern",local authority: "Barnet", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:Hendon_Central_tube.JPG"},
-{name: "High Barnet", lines: "Northern",local authority: "Barnet", zones: "5", img: "https://en.wikipedia.org/wiki/File:High_Barnet_stn_new_southern_entrance.JPG"},
-{name: "Highbury & Islington", lines: "Victoria",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Highbury_%26_Islington_station_building.JPG"},
-{name: "Highgate", lines: "Northern",local authority: "Haringey", zones: "3", img: "https://en.wikipedia.org/wiki/File:Highgate_station_entrance_Priory.JPG"},
-{name: "High Street Kensington", lines: "DistrictCircle",local authority: "Kensington and Chelsea", zones: "1", img: "https://en.wikipedia.org/wiki/File:High_Street_Kensington_station_October_2013.jpg"},
-{name: "Hillingdon", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Hillingdon_Underground_Station.jpg"},
-{name: "Holborn", lines: "CentralPiccadilly",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Holborn_station_Piccadilly_westbound.JPG"},
-{name: "Holland Park", lines: "Central",local authority: "Kensington and Chelsea", zones: "2", img: "https://en.wikipedia.org/wiki/File:HollandPark.jpg"},
-{name: "Holloway Road", lines: "Piccadilly",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Hollowayrdtube.jpg"},
-{name: "Hornchurch", lines: "District",local authority: "Havering", zones: "6", img: "https://en.wikipedia.org/wiki/File:Hornchurch_tube_station_3.jpg"},
-{name: "Hounslow Central", lines: "Piccadilly",local authority: "Hounslow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Hounslow_Central_building.JPG"},
-{name: "Hounslow East", lines: "Piccadilly",local authority: "Hounslow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Hounslow_East_Station.JPG"},
-{name: "Hounslow West", lines: "Piccadilly",local authority: "Hounslow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Hounslow_West_tube_station_07_July_2006.jpg"},
-{name: "Hyde Park Corner", lines: "Piccadilly",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Hyde_Park_Corner.jpg"},
-{name: "Ickenham", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Ickenham_tube_station_1.jpg"},
-{name: "Kennington", lines: "Northern",local authority: "Southwark", zones: "2", img: "https://en.wikipedia.org/wiki/File:Kennington_Tube_Station.jpg"},
-{name: "Kensal Green", lines: "Bakerloo",local authority: "Brent", zones: "2", img: "https://en.wikipedia.org/wiki/File:Kensal_Green_Tube_Station_2008.jpg"},
-{name: "Kensington (Olympia)", lines: "District",local authority: "Kensington and Chelsea", zones: "2", img: "https://en.wikipedia.org/wiki/File:KensingtonOlympia.jpg"},
-{name: "Kentish Town", lines: "Northern",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Kentish_Town_stn_building.JPG"},
-{name: "Kenton", lines: "Bakerloo",local authority: "BrentHarrow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Kenton_station_building.JPG"},
-{name: "Kew Gardens", lines: "District",local authority: "Richmond", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:Kew_Gardens_stn_rear_entrance.JPG"},
-{name: "Kilburn", lines: "Jubilee",local authority: "Brent", zones: "2", img: "https://en.wikipedia.org/wiki/File:Kilburn2.jpg"},
-{name: "Kilburn Park", lines: "Bakerloo",local authority: "Brent", zones: "2", img: "https://en.wikipedia.org/wiki/File:Kilburn_park_tube_station.jpg"},
-{name: "Kingsbury", lines: "Jubilee",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Kingsbury_tube_station.jpg"},
-{name: "King's Cross St. Pancras", lines: "MetropolitanNorthernPiccadillyCircleVictoriaHammersmith & City",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:King%27s_Cross_St_Pancras_tube_stn_Euston_Rd_NW_entrance.JPG"},
-{name: "Knightsbridge", lines: "Piccadilly",local authority: "Kensington and Chelsea", zones: "1", img: "https://en.wikipedia.org/wiki/File:Knightsbridge-tube-station-sloane-street-entrance.jpg"},
-{name: "Ladbroke Grove", lines: "Hammersmith & CityCircle",local authority: "Kensington and Chelsea", zones: "2", img: "https://en.wikipedia.org/wiki/File:Ladbroke_Grove_tube_station_4.jpg"},
-{name: "Lambeth North", lines: "Bakerloo",local authority: "Lambeth", zones: "1", img: "https://en.wikipedia.org/wiki/File:Lambethnorth.jpg"},
-{name: "Lancaster Gate", lines: "Central",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Lancaster_Gate_stn_entrance.JPG"},
-{name: "Latimer Road", lines: "Hammersmith & CityCircle",local authority: "Kensington and Chelsea", zones: "2", img: "https://en.wikipedia.org/wiki/File:Latimer_Road_Tube.jpg"},
-{name: "Leicester Square", lines: "PiccadillyNorthern",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:LeicesterSquareTubeStation.jpg"},
-{name: "Leyton", lines: "Central",local authority: "Waltham Forest", zones: "3", img: "https://en.wikipedia.org/wiki/File:Leyton_stn_building.JPG"},
-{name: "Leytonstone", lines: "Central",local authority: "Waltham Forest", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:Leytonstone_east_entrance.JPG"},
-{name: "Liverpool Street", lines: "MetropolitanCentralCircleHammersmith & City",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Liverpool_Street_Underground_concourse_entr.JPG"},
-{name: "London Bridge", lines: "NorthernJubilee",local authority: "Southwark", zones: "1", img: "https://en.wikipedia.org/wiki/File:London_bridge_tube_station.jpg"},
-{name: "Loughton", lines: "Central",local authority: "Epping Forest", zones: "6", img: "https://en.wikipedia.org/wiki/File:Loughton_station_building.JPG"},
-{name: "Maida Vale", lines: "Bakerloo",local authority: "City of Westminster", zones: "2", img: "https://en.wikipedia.org/wiki/File:MaidaVale.jpg"},
-{name: "Manor House", lines: "Piccadilly",local authority: "HackneyHaringey", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Manor_House_stn_main_entrance.JPG"},
-{name: "Mansion House", lines: "DistrictCircle",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Mansionhouse300.jpg"},
-{name: "Marble Arch", lines: "Central",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Marble_Arch_stn_eastbound_look_west.JPG"},
-{name: "Marylebone", lines: "Bakerloo",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Marylebone_station_entrance.JPG"},
-{name: "Mile End", lines: "DistrictHammersmith & CityCentral",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Mile_End_stn_entrance.JPG"},
-{name: "Mill Hill East", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Mill_Hill_East_stn_building.JPG"},
-{name: "Monument", lines: "DistrictCircle",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Monument_underground_station.jpg"},
-{name: "Moorgate", lines: "MetropolitanNorthernCircleHammersmith & City",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:Entrance_to_underground_station,_west_side_of_Moorgate,_London_-_geograph.org.uk_-_1408534.jpg"},
-{name: "Moor Park", lines: "Metropolitan",local authority: "Three Rivers", zones: "6 & 7", img: "https://en.wikipedia.org/wiki/File:Moor_Park_stn_main_entrance.JPG"},
-{name: "Morden", lines: "Northern",local authority: "Merton", zones: "4", img: "https://en.wikipedia.org/wiki/File:Morden_station_entrance.JPG"},
-{name: "Mornington Crescent", lines: "Northern",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Mornington_Crescent_stn_building.JPG"},
-{name: "Neasden", lines: "Jubilee",local authority: "Brent", zones: "3", img: "https://en.wikipedia.org/wiki/File:Neasden_tube_station_exterior.jpg"},
-{name: "Newbury Park", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Newbury_Park_stn_bus_shelter2.JPG"},
-{name: "North Acton", lines: "Central",local authority: "Ealing", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:North_Acton_stn_entrance.JPG"},
-{name: "North Ealing", lines: "Piccadilly",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:North_Ealing_stn_building.JPG"},
-{name: "North Greenwich", lines: "Jubilee",local authority: "Greenwich", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:North_greenwich_tube_station.jpg"},
-{name: "North Harrow", lines: "Metropolitan",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:N_Harrow_station.jpg"},
-{name: "North Wembley", lines: "Bakerloo",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Northwembley2.jpg"},
-{name: "Northfields", lines: "Piccadilly",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:Northfields_station.jpg"},
-{name: "Northolt", lines: "Central",local authority: "Ealing", zones: "5", img: "https://en.wikipedia.org/wiki/File:Northolt_station_westbound.JPG"},
-{name: "Northwick Park", lines: "Metropolitan",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Northwick_Park_tube_station_1.jpg"},
-{name: "Northwood", lines: "Metropolitan",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Northwood_northbound_platform_2.jpg"},
-{name: "Northwood Hills", lines: "Metropolitan",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Northwood_Hills_tube_station.jpg"},
-{name: "Notting Hill Gate", lines: "DistrictCentralCircle",local authority: "Kensington and Chelsea", zones: "1 & 2", img: "https://en.wikipedia.org/wiki/File:NottingHillGate3.jpg"},
-{name: "Oakwood", lines: "Piccadilly",local authority: "Enfield", zones: "5", img: "https://en.wikipedia.org/wiki/File:Oakwood_tube_station_better.jpg"},
-{name: "Old Street", lines: "Northern",local authority: "IslingtonHackney", zones: "1", img: "https://en.wikipedia.org/wiki/File:Old_Street_stn_northwest_entrance.JPG"},
-{name: "Osterley", lines: "Piccadilly",local authority: "Hounslow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Osterley_tube_Station.jpg"},
-{name: "Oval", lines: "Northern",local authority: "Lambeth", zones: "2", img: "https://en.wikipedia.org/wiki/File:Oval_tube.jpg"},
-{name: "Oxford Circus", lines: "CentralBakerlooVictoria",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Oxford_Circus_stn_Bakerloo_building.jpg"},
-{name: "Paddington", lines: "DistrictCircleBakerloo",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Paddington_District%26Circle.jpg"},
-{name: "Paddington", lines: "Hammersmith & CityCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:New_entrance_to_Paddington_station_(geograph_3745498).jpg"},
-{name: "Park Royal", lines: "Piccadilly",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:Park_Royal_Underground_Station,_Piccadilly_Line_-_geograph.org.uk_-_15937.jpg"},
-{name: "Parsons Green", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:ParsonsGreen1.jpg"},
-{name: "Perivale", lines: "Central",local authority: "Ealing", zones: "4", img: "https://en.wikipedia.org/wiki/File:Perivale_station_building.JPG"},
-{name: "Piccadilly Circus", lines: "BakerlooPiccadilly",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Piccadillycircus_tube_station.jpg"},
-{name: "Pimlico", lines: "Victoria",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:PimlicoStation.jpg"},
-{name: "Pinner", lines: "Metropolitan",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Pinner_tube_station.jpg"},
-{name: "Plaistow", lines: "DistrictHammersmith & City",local authority: "Newham", zones: "3", img: "https://en.wikipedia.org/wiki/File:Plaistow_tube_station_2005-12-10_01.jpg"},
-{name: "Preston Road", lines: "Metropolitan",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Preston_Road_Tube_Station.jpg"},
-{name: "Putney Bridge", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:PutneyBridge1.jpg"},
-{name: "Queen's Park", lines: "Bakerloo",local authority: "Brent", zones: "2", img: "https://en.wikipedia.org/wiki/File:Queens_Park_station_05-6-07.jpg"},
-{name: "Queensbury", lines: "Jubilee",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Queensbury_station_entrance.JPG"},
-{name: "Queensway", lines: "Central",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Queensway_tube_station.jpg"},
-{name: "Ravenscourt Park", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Ravenscourt_Park_Tube_Station_2008.jpg"},
-{name: "Rayners Lane", lines: "MetropolitanPiccadilly",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Rayners_Lane_stn_building.JPG"},
-{name: "Redbridge", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Redbridge_station_entrance_east.JPG"},
-{name: "Regent's Park", lines: "Bakerloo",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Regents_Park_tube_station.jpg"},
-{name: "Richmond", lines: "District",local authority: "Richmond", zones: "4", img: "https://en.wikipedia.org/wiki/File:Richmond_Station,_Richmond,_Surrey.jpg"},
-{name: "Rickmansworth", lines: "Metropolitan",local authority: "Three Rivers", zones: "7", img: "https://en.wikipedia.org/wiki/File:Rickmansworth_station_1.jpg"},
-{name: "Roding Valley", lines: "Central",local authority: "Epping ForestRedbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:1992_Stock_Roding_Valley.jpg"},
-{name: "Royal Oak", lines: "Hammersmith & CityCircle",local authority: "City of Westminster", zones: "2", img: "https://en.wikipedia.org/wiki/File:Royal_Oak_tube_station_Entrance.jpg"},
-{name: "Ruislip", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Ruislip_station_building.JPG"},
-{name: "Ruislip Gardens", lines: "Central",local authority: "Hillingdon", zones: "5", img: "https://en.wikipedia.org/wiki/File:Ruislip_Gardens_Station.jpg"},
-{name: "Ruislip Manor", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Ruislip_Manor_tube_station_1.jpg"},
-{name: "Russell Square", lines: "Piccadilly",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Russell_Square_station.jpg"},
-{name: "St. James's Park", lines: "DistrictCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:55BroadwayLondon.jpg"},
-{name: "St. John's Wood", lines: "Jubilee",local authority: "City of Westminster", zones: "2", img: "https://en.wikipedia.org/wiki/File:StJohnsWood.jpg"},
-{name: "St. Paul's", lines: "Central",local authority: "City of London", zones: "1", img: "https://en.wikipedia.org/wiki/File:St_Pauls_station_eastbound_look_west_refurb.JPG"},
-{name: "Seven Sisters", lines: "Victoria",local authority: "Haringey", zones: "3", img: "https://en.wikipedia.org/wiki/File:Seven_Sisters_stn_Victoria_terminate_platform_4_look_south.JPG"},
-{name: "Shepherd's Bush", lines: "Central",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Shepherd%27s_Bush_tube_stn_eastern_entrance.JPG"},
-{name: "Shepherd's Bush Market", lines: "Hammersmith & CityCircle",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Shepherdsbushbbc.jpg"},
-{name: "Sloane Square", lines: "DistrictCircle",local authority: "Kensington and Chelsea", zones: "1", img: "https://en.wikipedia.org/wiki/File:River_westbourne_sloane_square.jpg"},
-{name: "Snaresbrook", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Snaresbrook_station_building.JPG"},
-{name: "South Ealing", lines: "Piccadilly",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:South_Ealing_stn_building.JPG"},
-{name: "South Harrow", lines: "Piccadilly",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:South_Harrow_station_2005-10-24_01.jpg"},
-{name: "South Kensington", lines: "DistrictPiccadillyCircle",local authority: "Kensington and Chelsea", zones: "1", img: "https://en.wikipedia.org/wiki/File:South_Kensington_station.jpg"},
-{name: "South Kenton", lines: "Bakerloo",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:South_Kenton_stn_west_entrance.JPG"},
-{name: "South Ruislip", lines: "Central",local authority: "Hillingdon", zones: "5", img: "https://en.wikipedia.org/wiki/File:South_Ruislip_stn_building.JPG"},
-{name: "South Wimbledon", lines: "Northern",local authority: "Merton", zones: "3 & 4", img: "https://en.wikipedia.org/wiki/File:South_Wimbledon_tube_station_surface_building.jpg"},
-{name: "South Woodford", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:South_woodford_station_1.jpg"},
-{name: "Southfields", lines: "District",local authority: "Wandsworth", zones: "3", img: "https://en.wikipedia.org/wiki/File:Southfields_Underground_Station.jpg"},
-{name: "Southgate", lines: "Piccadilly",local authority: "Enfield", zones: "4", img: "https://en.wikipedia.org/wiki/File:Southgate_station_building2.JPG"},
-{name: "Southwark", lines: "Jubilee",local authority: "Southwark", zones: "1", img: "https://en.wikipedia.org/wiki/File:Southwarktubestation.JPG"},
-{name: "Stamford Brook", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:StamfordBrook3.jpg"},
-{name: "Stanmore", lines: "Jubilee",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:Stanmore_tube_station_1.jpg"},
-{name: "Stepney Green", lines: "DistrictHammersmith & City",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Stepney_Green_Tube_Station_2007.jpg"},
-{name: "Stockwell", lines: "NorthernVictoria",local authority: "Lambeth", zones: "2", img: "https://en.wikipedia.org/wiki/File:StockwellTube.jpg"},
-{name: "Stonebridge Park", lines: "Bakerloo",local authority: "Brent", zones: "3", img: "https://en.wikipedia.org/wiki/File:Stonebridge_Park_station_1.jpg"},
-{name: "Stratford", lines: "CentralJubilee",local authority: "Newham", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Stratford_Station_London_UK.jpg"},
-{name: "Sudbury Hill", lines: "Piccadilly",local authority: "EalingHarrow", zones: "4", img: "https://en.wikipedia.org/wiki/File:Sudbury_Hill_stn_building.JPG"},
-{name: "Sudbury Town", lines: "Piccadilly",local authority: "BrentEaling", zones: "4", img: "https://en.wikipedia.org/wiki/File:Sudbury_Town_tube_station.jpg"},
-{name: "Swiss Cottage", lines: "Jubilee",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:Swiss_Cottage_stn_east_entrance.JPG"},
-{name: "Temple", lines: "DistrictCircle",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Templetube.jpg"},
-{name: "Theydon Bois", lines: "Central",local authority: "Epping Forest", zones: "6", img: "https://en.wikipedia.org/wiki/File:Theydon_Bois_stn_building.JPG"},
-{name: "Tooting Bec", lines: "Northern",local authority: "Wandsworth", zones: "3", img: "https://en.wikipedia.org/wiki/File:Tooting_Bec_tube_entrance.jpg"},
-{name: "Tooting Broadway", lines: "Northern",local authority: "Wandsworth", zones: "3", img: "https://en.wikipedia.org/wiki/File:Tooting_Broadway_stn_building.JPG"},
-{name: "Tottenham Court Road", lines: "CentralNorthern",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Tottenhamstation_londonunderground.jpg"},
-{name: "Tottenham Hale", lines: "Victoria",local authority: "Haringey", zones: "3", img: "https://en.wikipedia.org/wiki/File:Tottenham_Hale_station_070414.JPG"},
-{name: "Totteridge & Whetstone", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Totteridge_%26_Whetstone_stn_building.JPG"},
-{name: "Tower Hill", lines: "DistrictCircle",local authority: "Tower Hamlets", zones: "1", img: "https://en.wikipedia.org/wiki/File:Tower_hill_entrance.jpg"},
-{name: "Tufnell Park", lines: "Northern",local authority: "Islington", zones: "2", img: "https://en.wikipedia.org/wiki/File:Tufnell_Park_stn_building.JPG"},
-{name: "Turnham Green", lines: "DistrictPiccadilly",local authority: "Hounslow", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Turnham_Green.jpg"},
-{name: "Turnpike Lane", lines: "Piccadilly",local authority: "Haringey", zones: "3", img: "https://en.wikipedia.org/wiki/File:Turnpike_Lane_stn_building.JPG"},
-{name: "Upminster", lines: "District",local authority: "Havering", zones: "6", img: "https://en.wikipedia.org/wiki/File:Upminster_station_main_entrance.JPG"},
-{name: "Upminster Bridge", lines: "District",local authority: "Havering", zones: "6", img: "https://en.wikipedia.org/wiki/File:Upminster_Bridge_tube_station_1.jpg"},
-{name: "Upney", lines: "District",local authority: "Barking and Dagenham", zones: "4", img: "https://en.wikipedia.org/wiki/File:Upney_station_building.JPG"},
-{name: "Upton Park", lines: "DistrictHammersmith & City",local authority: "Newham", zones: "3", img: "https://en.wikipedia.org/wiki/File:Upton_Park_tube_station_1.jpg"},
-{name: "Uxbridge", lines: "MetropolitanPiccadilly",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:Uxbridge_tube_station.jpg"},
-{name: "Vauxhall", lines: "Victoria",local authority: "Lambeth", zones: "1 & 2", img: "https://en.wikipedia.org/wiki/File:Vauxhall_mainline_stn_north_building.JPG"},
-{name: "Victoria", lines: "DistrictCircleVictoria",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:London_Victoria_station_-14Oct2008.jpg"},
-{name: "Walthamstow Central", lines: "Victoria",local authority: "Waltham Forest", zones: "3", img: "https://en.wikipedia.org/wiki/File:Walthamstow_Central_stn_Victoria_line_look_north.JPG"},
-{name: "Wanstead", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Wanstead_station_building_southwest.JPG"},
-{name: "Warren Street", lines: "NorthernVictoria",local authority: "Camden", zones: "1", img: "https://en.wikipedia.org/wiki/File:Warren_Street_stn_entrance.JPG"},
-{name: "Warwick Avenue", lines: "Bakerloo",local authority: "City of Westminster", zones: "2", img: "https://en.wikipedia.org/wiki/File:WarwickAvenue.jpg"},
-{name: "Waterloo", lines: "Waterloo & CityBakerlooNorthernJubilee",local authority: "Lambeth", zones: "1", img: "https://en.wikipedia.org/wiki/File:Waterloo_tube_stn_Northern_southbound_look_north.JPG"},
-{name: "Watford", lines: "Metropolitan",local authority: "Watford", zones: "7", img: "https://en.wikipedia.org/wiki/File:Watford_Tube_Station.JPG"},
-{name: "Wembley Central", lines: "Bakerloo",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Wembley_Central_station_8.jpg"},
-{name: "Wembley Park", lines: "MetropolitanJubilee",local authority: "Brent", zones: "4", img: "https://en.wikipedia.org/wiki/File:Wembley_Park_tube_station_extension.jpg"},
-{name: "West Acton", lines: "Central",local authority: "Ealing", zones: "3", img: "https://en.wikipedia.org/wiki/File:WestActon1.jpg"},
-{name: "West Brompton", lines: "District",local authority: "Kensington and Chelsea", zones: "2", img: "https://en.wikipedia.org/wiki/File:WestBrompton1.jpg"},
-{name: "West Finchley", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:West_Finchley_stn_entrance.JPG"},
-{name: "West Ham", lines: "DistrictHammersmith & CityJubilee",local authority: "Newham", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:West_Ham_stn_entrance.JPG"},
-{name: "West Hampstead", lines: "Jubilee",local authority: "Camden", zones: "2", img: "https://en.wikipedia.org/wiki/File:West_Hampstead_Tube.jpg"},
-{name: "West Harrow", lines: "Metropolitan",local authority: "Harrow", zones: "5", img: "https://en.wikipedia.org/wiki/File:West_Harrow_tube_station_2.jpg"},
-{name: "West Kensington", lines: "District",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:WestKensington.jpg"},
-{name: "West Ruislip", lines: "Central",local authority: "Hillingdon", zones: "6", img: "https://en.wikipedia.org/wiki/File:West_Ruislip_stn_building.JPG"},
-{name: "Westbourne Park", lines: "Hammersmith & CityCircle",local authority: "City of Westminster", zones: "2", img: "https://en.wikipedia.org/wiki/File:Westbourne_Park_tube_station_1.jpg"},
-{name: "Westminster", lines: "DistrictCircleJubilee",local authority: "City of Westminster", zones: "1", img: "https://en.wikipedia.org/wiki/File:Westminster_station_entrance_Portcullis_House.JPG"},
-{name: "White City", lines: "Central",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:White_city_tube_station.jpg"},
-{name: "Whitechapel", lines: "DistrictHammersmith & City",local authority: "Tower Hamlets", zones: "2", img: "https://en.wikipedia.org/wiki/File:Whitechapel_station.jpg"},
-{name: "Willesden Green", lines: "Jubilee",local authority: "Brent", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Willesden_Green_stn_building.JPG"},
-{name: "Willesden Junction", lines: "Bakerloo",local authority: "Brent", zones: "2 & 3", img: "https://en.wikipedia.org/wiki/File:Willesden_Junction_Overground_2008.jpg"},
-{name: "Wimbledon", lines: "District",local authority: "Merton", zones: "3", img: "https://en.wikipedia.org/wiki/File:Wimbledon_station_main_building.JPG"},
-{name: "Wimbledon Park", lines: "District",local authority: "Merton", zones: "3", img: "https://en.wikipedia.org/wiki/File:Wimbledon_Park_Underground_Station.jpg"},
-{name: "Wood Green", lines: "Piccadilly",local authority: "Haringey", zones: "3", img: "https://en.wikipedia.org/wiki/File:Wood_Green_tube_station_070414.JPG"},
-{name: "Wood Lane", lines: "Hammersmith & CityCircle",local authority: "Hammersmith and Fulham", zones: "2", img: "https://en.wikipedia.org/wiki/File:Wood_Lane_stn_entrance.JPG"},
-{name: "Woodford", lines: "Central",local authority: "Redbridge", zones: "4", img: "https://en.wikipedia.org/wiki/File:Woodford_Station.jpg"},
-{name: "Woodside Park", lines: "Northern",local authority: "Barnet", zones: "4", img: "https://en.wikipedia.org/wiki/File:Woodside_Park_stn_building.JPG"}, ];
+export const STATIONS = [
+{
+    name: "Acton Town",
+    lines: "District and Piccadilly",
+    zones: "3"
+},
+{
+    name: "Aldgate",
+    lines: "Metropolitan Circle",
+    zones: "1"
+},
+{
+    name: "Aldgate East",
+    lines: "Hammersmith & City District",
+    zones: "1"
+},
+{
+    name: "Alperton",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Amersham",
+    lines: "Metropolitan",
+    zones: "9"
+},
+{
+    name: "Angel",
+    lines: "Northern",
+    zones: "1"
+},
+{
+    name: "Archway",
+    lines: "Northern",
+    zones: "2 & 3"
+},
+{
+    name: "Arnos Grove",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Arsenal",
+    lines: "Piccadilly",
+    zones: "2"
+},
+{
+    name: "Baker Street",
+    lines: "Metropolitan Bakerloo Circle Jubilee Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Balham",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Bank",
+    lines: "Waterloo & City Northern Central",
+    zones: "1"
+},
+{
+    name: "Barbican",
+    lines: "Metropolitan Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Barking",
+    lines: "District Hammersmith & City",
+    zones: "4"
+},
+{
+    name: "Barkingside",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Barons Court",
+    lines: "District Piccadilly",
+    zones: "2"
+},
+{
+    name: "Bayswater",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Becontree",
+    lines: "District",
+    zones: "5"
+},
+{
+    name: "Belsize Park",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Bermondsey",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "Bethnal Green",
+    lines: "Central",
+    zones: "2"
+},
+{
+    name: "Blackfriars",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Blackhorse Road",
+    lines: "Victoria",
+    zones: "3"
+},
+{
+    name: "Bond Street",
+    lines: "Central Jubilee",
+    zones: "1"
+},
+{
+    name: "Borough",
+    lines: "Northern",
+    zones: "1"
+},
+{
+    name: "Boston Manor",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Bounds Green",
+    lines: "Piccadilly",
+    zones: "3 & 4"
+},
+{
+    name: "Bow Road",
+    lines: "District Hammersmith & City",
+    zones: "2"
+},
+{
+    name: "Brent Cross",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Brixton",
+    lines: "Victoria",
+    zones: "2"
+},
+{
+    name: "Bromley-by-Bow",
+    lines: "District Hammersmith & City",
+    zones: "2 & 3"
+},
+{
+    name: "Buckhurst Hill",
+    lines: "Central",
+    zones: "5"
+},
+{
+    name: "Burnt Oak",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Caledonian Road",
+    lines: "Piccadilly",
+    zones: "2"
+},
+{
+    name: "Camden Town",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Canada Water",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "Canary Wharf",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "Canning Town",
+    lines: "Jubilee",
+    zones: "2 & 3"
+},
+{
+    name: "Cannon Street",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Canons Park",
+    lines: "Jubilee",
+    zones: "5"
+},
+{
+    name: "Chalfont & Latimer",
+    lines: "Metropolitan",
+    zones: "8"
+},
+{
+    name: "Chalk Farm",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Chancery Lane",
+    lines: "Central",
+    zones: "1"
+},
+{
+    name: "Charing Cross",
+    lines: "Bakerloo Northern",
+    zones: "1"
+},
+{
+    name: "Chesham",
+    lines: "Metropolitan",
+    zones: "9"
+},
+{
+    name: "Chigwell",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Chiswick Park",
+    lines: "District",
+    zones: "3"
+},
+{
+    name: "Chorleywood",
+    lines: "Metropolitan",
+    zones: "7"
+},
+{
+    name: "Clapham Common",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Clapham North",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Clapham South",
+    lines: "Northern",
+    zones: "2 & 3"
+},
+{
+    name: "Cockfosters",
+    lines: "Piccadilly",
+    zones: "5"
+},
+{
+    name: "Colindale",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Colliers Wood",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Covent Garden",
+    lines: "Piccadilly",
+    zones: "1"
+},
+{
+    name: "Croxley",
+    lines: "Metropolitan",
+    zones: "7"
+},
+{
+    name: "Dagenham East",
+    lines: "District",
+    zones: "5"
+},
+{
+    name: "Dagenham Heathway",
+    lines: "District",
+    zones: "5"
+},
+{
+    name: "Debden",
+    lines: "Central",
+    zones: "6"
+},
+{
+    name: "Dollis Hill",
+    lines: "Jubilee",
+    zones: "3"
+},
+{
+    name: "Ealing Broadway",
+    lines: "District Central",
+    zones: "3"
+},
+{
+    name: "Ealing Common",
+    lines: "District Piccadilly",
+    zones: "3"
+},
+{
+    name: "Earl's Court",
+    lines: "District Piccadilly",
+    zones: "1 & 2"
+},
+{
+    name: "East Acton",
+    lines: "Central",
+    zones: "2"
+},
+{
+    name: "East Finchley",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "East Ham",
+    lines: "District Hammersmith & City",
+    zones: "3 & 4"
+},
+{
+    name: "East Putney",
+    lines: "District",
+    zones: "2 & 3"
+},
+{
+    name: "Eastcote",
+    lines: "Metropolitan Piccadilly",
+    zones: "5"
+},
+{
+    name: "Edgware",
+    lines: "Northern",
+    zones: "5"
+},
+{
+    name: "Edgware Road",
+    lines: "Bakerloo",
+    zones: "1"
+},
+{
+    name: "Edgware Road",
+    lines: "Hammersmith & City District Circle",
+    zones: "1"
+},
+{
+    name: "Elephant & Castle",
+    lines: "Northern Bakerloo",
+    zones: "1 & 2"
+},
+{
+    name: "Elm Park",
+    lines: "District",
+    zones: "6"
+},
+{
+    name: "Embankment",
+    lines: "District Bakerloo Northern Circle",
+    zones: "1"
+},
+{
+    name: "Epping",
+    lines: "Central",
+    zones: "6"
+},
+{
+    name: "Euston",
+    lines: "Northern Victoria",
+    zones: "1"
+},
+{
+    name: "Euston Square",
+    lines: "Metropolitan Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Fairlop",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Farringdon",
+    lines: "Metropolitan Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Finchley Central",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Finchley Road",
+    lines: "Metropolitan Jubilee",
+    zones: "2"
+},
+{
+    name: "Finsbury Park",
+    lines: "Piccadilly Victoria",
+    zones: "2"
+},
+{
+    name: "Fulham Broadway",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Gants Hill",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Gloucester Road",
+    lines: "District Piccadilly Circle",
+    zones: "1"
+},
+{
+    name: "Golders Green",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Goldhawk Road",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Goodge Street",
+    lines: "Northern",
+    zones: "1"
+},
+{
+    name: "Grange Hill",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Great Portland Street",
+    lines: "Metropolitan Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Greenford",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Green Park",
+    lines: "Piccadilly Victoria Jubilee",
+    zones: "1"
+},
+{
+    name: "Gunnersbury",
+    lines: "District",
+    zones: "3"
+},
+{
+    name: "Hainault",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Hammersmith",
+    lines: "District Piccadilly",
+    zones: "2"
+},
+{
+    name: "Hammersmith",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Hampstead",
+    lines: "Northern",
+    zones: "2 & 3"
+},
+{
+    name: "Hanger Lane",
+    lines: "Central",
+    zones: "3"
+},
+{
+    name: "Harlesden",
+    lines: "Bakerloo",
+    zones: "3"
+},
+{
+    name: "Harrow & Wealdstone",
+    lines: "Bakerloo",
+    zones: "5"
+},
+{
+    name: "Harrow-on-the-Hill",
+    lines: "Metropolitan",
+    zones: "5"
+},
+{
+    name: "Hatton Cross",
+    lines: "Piccadilly",
+    zones: "5 & 6"
+},
+{
+    name: "Heathrow Terminals 2 & 3",
+    lines: "Piccadilly",
+    zones: "6"
+},
+{
+    name: "Heathrow Terminal 4",
+    lines: "Piccadilly",
+    zones: "6"
+},
+{
+    name: "Heathrow Terminal 5",
+    lines: "Piccadilly",
+    zones: "6"
+},
+{
+    name: "Hendon Central",
+    lines: "Northern",
+    zones: "3 & 4"
+},
+{
+    name: "High Barnet",
+    lines: "Northern",
+    zones: "5"
+},
+{
+    name: "Highbury & Islington",
+    lines: "Victoria",
+    zones: "2"
+},
+{
+    name: "Highgate",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "High Street Kensington",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Hillingdon",
+    lines: "Metropolitan Piccadilly",
+    zones: "6"
+},
+{
+    name: "Holborn",
+    lines: "Central Piccadilly",
+    zones: "1"
+},
+{
+    name: "Holland Park",
+    lines: "Central",
+    zones: "2"
+},
+{
+    name: "Holloway Road",
+    lines: "Piccadilly",
+    zones: "2"
+},
+{
+    name: "Hornchurch",
+    lines: "District",
+    zones: "6"
+},
+{
+    name: "Hounslow Central",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Hounslow East",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Hounslow West",
+    lines: "Piccadilly",
+    zones: "5"
+},
+{
+    name: "Hyde Park Corner",
+    lines: "Piccadilly",
+    zones: "1"
+},
+{
+    name: "Ickenham",
+    lines: "Metropolitan Piccadilly",
+    zones: "6"
+},
+{
+    name: "Kennington",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Kensal Green",
+    lines: "Bakerloo",
+    zones: "2"
+},
+{
+    name: "Kensington (Olympia)",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Kentish Town",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Kenton",
+    lines: "Bakerloo",
+    zones: "4"
+},
+{
+    name: "Kew Gardens",
+    lines: "District",
+    zones: "3 & 4"
+},
+{
+    name: "Kilburn",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "Kilburn Park",
+    lines: "Bakerloo",
+    zones: "2"
+},
+{
+    name: "Kingsbury",
+    lines: "Jubilee",
+    zones: "4"
+},
+{
+    name: "King's Cross St. Pancras",
+    lines: "Metropolitan Northern Piccadilly Circle Victoria Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Knightsbridge",
+    lines: "Piccadilly",
+    zones: "1"
+},
+{
+    name: "Ladbroke Grove",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Lambeth North",
+    lines: "Bakerloo",
+    zones: "1"
+},
+{
+    name: "Lancaster Gate",
+    lines: "Central",
+    zones: "1"
+},
+{
+    name: "Latimer Road",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Leicester Square",
+    lines: "Piccadilly Northern",
+    zones: "1"
+},
+{
+    name: "Leyton",
+    lines: "Central",
+    zones: "3"
+},
+{
+    name: "Leytonstone",
+    lines: "Central",
+    zones: "3 & 4"
+},
+{
+    name: "Liverpool Street",
+    lines: "Metropolitan Central Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "London Bridge",
+    lines: "Northern Jubilee",
+    zones: "1"
+},
+{
+    name: "Loughton",
+    lines: "Central",
+    zones: "6"
+},
+{
+    name: "Maida Vale",
+    lines: "Bakerloo",
+    zones: "2"
+},
+{
+    name: "Manor House",
+    lines: "Piccadilly",
+    zones: "2 & 3"
+},
+{
+    name: "Mansion House",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Marble Arch",
+    lines: "Central",
+    zones: "1"
+},
+{
+    name: "Marylebone",
+    lines: "Bakerloo",
+    zones: "1"
+},
+{
+    name: "Mile End",
+    lines: "District Hammersmith & City Central",
+    zones: "2"
+},
+{
+    name: "Mill Hill East",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Monument",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Moorgate",
+    lines: "Metropolitan Northern Circle Hammersmith & City",
+    zones: "1"
+},
+{
+    name: "Moor Park",
+    lines: "Metropolitan",
+    zones: "6 & 7"
+},
+{
+    name: "Morden",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Mornington Crescent",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Neasden",
+    lines: "Jubilee",
+    zones: "3"
+},
+{
+    name: "Newbury Park",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "North Acton",
+    lines: "Central",
+    zones: "2 & 3"
+},
+{
+    name: "North Ealing",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "North Greenwich",
+    lines: "Jubilee",
+    zones: "2 & 3"
+},
+{
+    name: "North Harrow",
+    lines: "Metropolitan",
+    zones: "5"
+},
+{
+    name: "North Wembley",
+    lines: "Bakerloo",
+    zones: "4"
+},
+{
+    name: "Northfields",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "Northolt",
+    lines: "Central",
+    zones: "5"
+},
+{
+    name: "Northwick Park",
+    lines: "Metropolitan",
+    zones: "4"
+},
+{
+    name: "Northwood",
+    lines: "Metropolitan",
+    zones: "6"
+},
+{
+    name: "Northwood Hills",
+    lines: "Metropolitan",
+    zones: "6"
+},
+{
+    name: "Notting Hill Gate",
+    lines: "District Central Circle",
+    zones: "1 & 2"
+},
+{
+    name: "Oakwood",
+    lines: "Piccadilly",
+    zones: "5"
+},
+{
+    name: "Old Street",
+    lines: "Northern",
+    zones: "1"
+},
+{
+    name: "Osterley",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Oval",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Oxford Circus",
+    lines: "Central Bakerloo Victoria",
+    zones: "1"
+},
+{
+    name: "Paddington",
+    lines: "District Circle Bakerloo",
+    zones: "1"
+},
+{
+    name: "Paddington",
+    lines: "Hammersmith & City Circle",
+    zones: "1"
+},
+{
+    name: "Park Royal",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "Parsons Green",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Perivale",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Piccadilly Circus",
+    lines: "Bakerloo Piccadilly",
+    zones: "1"
+},
+{
+    name: "Pimlico",
+    lines: "Victoria",
+    zones: "1"
+},
+{
+    name: "Pinner",
+    lines: "Metropolitan",
+    zones: "5"
+},
+{
+    name: "Plaistow",
+    lines: "District Hammersmith & City",
+    zones: "3"
+},
+{
+    name: "Preston Road",
+    lines: "Metropolitan",
+    zones: "4"
+},
+{
+    name: "Putney Bridge",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Queen's Park",
+    lines: "Bakerloo",
+    zones: "2"
+},
+{
+    name: "Queensbury",
+    lines: "Jubilee",
+    zones: "4"
+},
+{
+    name: "Queensway",
+    lines: "Central",
+    zones: "1"
+},
+{
+    name: "Ravenscourt Park",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Rayners Lane",
+    lines: "Metropolitan Piccadilly",
+    zones: "5"
+},
+{
+    name: "Redbridge",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Regent's Park",
+    lines: "Bakerloo",
+    zones: "1"
+},
+{
+    name: "Richmond",
+    lines: "District",
+    zones: "4"
+},
+{
+    name: "Rickmansworth",
+    lines: "Metropolitan",
+    zones: "7"
+},
+{
+    name: "Roding Valley",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Royal Oak",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Ruislip",
+    lines: "Metropolitan Piccadilly",
+    zones: "6"
+},
+{
+    name: "Ruislip Gardens",
+    lines: "Central",
+    zones: "5"
+},
+{
+    name: "Ruislip Manor",
+    lines: "Metropolitan Piccadilly",
+    zones: "6"
+},
+{
+    name: "Russell Square",
+    lines: "Piccadilly",
+    zones: "1"
+},
+{
+    name: "St. James's Park",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "St. John's Wood",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "St. Paul's",
+    lines: "Central",
+    zones: "1"
+},
+{
+    name: "Seven Sisters",
+    lines: "Victoria",
+    zones: "3"
+},
+{
+    name: "Shepherd's Bush",
+    lines: "Central",
+    zones: "2"
+},
+{
+    name: "Shepherd's Bush Market",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Sloane Square",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Snaresbrook",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "South Ealing",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "South Harrow",
+    lines: "Piccadilly",
+    zones: "5"
+},
+{
+    name: "South Kensington",
+    lines: "District Piccadilly Circle",
+    zones: "1"
+},
+{
+    name: "South Kenton",
+    lines: "Bakerloo",
+    zones: "4"
+},
+{
+    name: "South Ruislip",
+    lines: "Central",
+    zones: "5"
+},
+{
+    name: "South Wimbledon",
+    lines: "Northern",
+    zones: "3 & 4"
+},
+{
+    name: "South Woodford",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Southfields",
+    lines: "District",
+    zones: "3"
+},
+{
+    name: "Southgate",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Southwark",
+    lines: "Jubilee",
+    zones: "1"
+},
+{
+    name: "Stamford Brook",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "Stanmore",
+    lines: "Jubilee",
+    zones: "5"
+},
+{
+    name: "Stepney Green",
+    lines: "District Hammersmith & City",
+    zones: "2"
+},
+{
+    name: "Stockwell",
+    lines: "Northern Victoria",
+    zones: "2"
+},
+{
+    name: "Stonebridge Park",
+    lines: "Bakerloo",
+    zones: "3"
+},
+{
+    name: "Stratford",
+    lines: "Central Jubilee",
+    zones: "2 & 3"
+},
+{
+    name: "Sudbury Hill",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Sudbury Town",
+    lines: "Piccadilly",
+    zones: "4"
+},
+{
+    name: "Swiss Cottage",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "Temple",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Theydon Bois",
+    lines: "Central",
+    zones: "6"
+},
+{
+    name: "Tooting Bec",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Tooting Broadway",
+    lines: "Northern",
+    zones: "3"
+},
+{
+    name: "Tottenham Court Road",
+    lines: "Central Northern",
+    zones: "1"
+},
+{
+    name: "Tottenham Hale",
+    lines: "Victoria",
+    zones: "3"
+},
+{
+    name: "Totteridge & Whetstone",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "Tower Hill",
+    lines: "District Circle",
+    zones: "1"
+},
+{
+    name: "Tufnell Park",
+    lines: "Northern",
+    zones: "2"
+},
+{
+    name: "Turnham Green",
+    lines: "District Piccadilly",
+    zones: "2 & 3"
+},
+{
+    name: "Turnpike Lane",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "Upminster",
+    lines: "District",
+    zones: "6"
+},
+{
+    name: "Upminster Bridge",
+    lines: "District",
+    zones: "6"
+},
+{
+    name: "Upney",
+    lines: "District",
+    zones: "4"
+},
+{
+    name: "Upton Park",
+    lines: "District Hammersmith & City",
+    zones: "3"
+},
+{
+    name: "Uxbridge",
+    lines: "Metropolitan Piccadilly",
+    zones: "6"
+},
+{
+    name: "Vauxhall",
+    lines: "Victoria",
+    zones: "1 & 2"
+},
+{
+    name: "Victoria",
+    lines: "District Circle Victoria",
+    zones: "1"
+},
+{
+    name: "Walthamstow Central",
+    lines: "Victoria",
+    zones: "3"
+},
+{
+    name: "Wanstead",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Warren Street",
+    lines: "Northern Victoria",
+    zones: "1"
+},
+{
+    name: "Warwick Avenue",
+    lines: "Bakerloo",
+    zones: "2"
+},
+{
+    name: "Waterloo",
+    lines: "Waterloo & City Bakerloo Northern Jubilee",
+    zones: "1"
+},
+{
+    name: "Watford",
+    lines: "Metropolitan",
+    zones: "7"
+},
+{
+    name: "Wembley Central",
+    lines: "Bakerloo",
+    zones: "4"
+},
+{
+    name: "Wembley Park",
+    lines: "Metropolitan Jubilee",
+    zones: "4"
+},
+{
+    name: "West Acton",
+    lines: "Central",
+    zones: "3"
+},
+{
+    name: "West Brompton",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "West Finchley",
+    lines: "Northern",
+    zones: "4"
+},
+{
+    name: "West Ham",
+    lines: "District Hammersmith & City Jubilee",
+    zones: "2 & 3"
+},
+{
+    name: "West Hampstead",
+    lines: "Jubilee",
+    zones: "2"
+},
+{
+    name: "West Harrow",
+    lines: "Metropolitan",
+    zones: "5"
+},
+{
+    name: "West Kensington",
+    lines: "District",
+    zones: "2"
+},
+{
+    name: "West Ruislip",
+    lines: "Central",
+    zones: "6"
+},
+{
+    name: "Westbourne Park",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Westminster",
+    lines: "District Circle Jubilee",
+    zones: "1"
+},
+{
+    name: "White City",
+    lines: "Central",
+    zones: "2"
+},
+{
+    name: "Whitechapel",
+    lines: "District Hammersmith & City",
+    zones: "2"
+},
+{
+    name: "Willesden Green",
+    lines: "Jubilee",
+    zones: "2 & 3"
+},
+{
+    name: "Willesden Junction",
+    lines: "Bakerloo",
+    zones: "2 & 3"
+},
+{
+    name: "Wimbledon",
+    lines: "District",
+    zones: "3"
+},
+{
+    name: "Wimbledon Park",
+    lines: "District",
+    zones: "3"
+},
+{
+    name: "Wood Green",
+    lines: "Piccadilly",
+    zones: "3"
+},
+{
+    name: "Wood Lane",
+    lines: "Hammersmith & City Circle",
+    zones: "2"
+},
+{
+    name: "Woodford",
+    lines: "Central",
+    zones: "4"
+},
+{
+    name: "Woodside Park",
+    lines: "Northern",
+    zones: "4"
+}, 
+];

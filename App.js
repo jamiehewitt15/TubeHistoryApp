@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import Station from'./Components/Station'
 
 import { STATIONS } from './tube_data';
@@ -13,7 +13,7 @@ export default class App extends React.Component {
      visible_stations.push(<Station stationName={STATIONS[i].name} 
                                     stationLines={STATIONS[i].lines} 
                                     stationZones={STATIONS[i].zones} 
-                                    stationImage={STATIONS[i].img}
+                                    
                                     key={i}/>);
      
    }
