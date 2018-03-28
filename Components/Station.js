@@ -11,7 +11,7 @@ export  default class Station extends React.Component {
   render() {
       return (
           <View>
-          <Card title={this.props.stationName} image={require('../images/Aldgate.jpg')}>
+          <Card title={this.props.stationName} image={this.props.stationImage}>
        
           
           <Text>Lines: {this.props.stationLines} </Text>
