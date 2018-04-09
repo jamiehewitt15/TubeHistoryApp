@@ -16,6 +16,7 @@ export  default class Station extends React.Component {
           
           <Text>Lines: {this.props.stationLines} </Text>
           <Text>Zone: {this.props.stationZones} </Text>
+          <Text>Local Authority: {this.props.stationLocalAuthority} </Text>
           <Button title='MORE INFO'  
           buttonStyle={{
           backgroundColor: "rgba(92, 99,216, 1)",

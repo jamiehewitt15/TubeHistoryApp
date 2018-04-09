@@ -40,6 +40,7 @@ export default class App extends React.Component {
                                     stationLines={this.state.stations[i].lines} 
                                     stationZones={this.state.stations[i].zones} 
                                     stationImage={this.state.stations[i].image}
+                                    stationLocalAuthority={this.state.stations[i].localAuthority}
                                     key={i}/>);
      
    }
