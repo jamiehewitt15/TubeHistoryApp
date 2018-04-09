@@ -11,7 +11,7 @@ export default class App extends React.Component {
   constructor(props) {
       super(props);
       this.state={
-        stations: STATIONS.slice(0, 10)
+        stations: STATIONS.slice(0, 20)
       }
   }
   
