@@ -42,6 +42,7 @@ export default class App extends React.Component {
                                     stationImage={this.state.stations[i].image}
                                     stationLocalAuthority={this.state.stations[i].localAuthority}
                                     stationOpened={this.state.stations[i].opened}
+                                    stationPreviousNames={this.state.stations[i].previousNames}
                                     key={i}/>);
      
    }
@@ -65,7 +66,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#DAF7A6',
+    backgroundColor: '#cccccc',
     marginTop: 20
     // alignItems: 'center',
     

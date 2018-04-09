@@ -2,7 +2,7 @@ export const STATIONS = [
 
 {name: "Acton Town", lines: "District, Piccadilly", localAuthority: "Ealing", zones: "3", image: require("./images/ActonTown.jpg"), opened: "1 July 1879", mainlineOpened: "", previousNames: "Mill Hill Park: 1879–1910"},
 {name: "Aldgate", lines: "Metropolitan, Circle", localAuthority: "City of London", zones: "1", image: require("./images/Aldgate.jpg"), opened: "18 November 1876", mainlineOpened: "", previousNames: "None"},
-{name: "Aldgate East", lines: "Hammersmith & City, District", localAuthority: "Tower Hamlets", zones: "1", image: require("./images/AldgateEast.jpg"), opened: "6 October 1884resited 31 October 1938", mainlineOpened: "", previousNames: "Commercial Road: Proposed before opening"},
+{name: "Aldgate East", lines: "Hammersmith & City, District", localAuthority: "Tower Hamlets", zones: "1", image: require("./images/AldgateEast.jpg"), opened: "6 October 1884 (relocated 31 October 1938)", mainlineOpened: "", previousNames: "Commercial Road: Proposed before opening"},
 {name: "Alperton", lines: "Piccadilly", localAuthority: "Brent", zones: "4", image: require("./images/Alperton.jpg"), opened: "28 June 1903", mainlineOpened: "", previousNames: "Perivale-Alperton: 1903–10"},
 {name: "Amersham", lines: "Metropolitan", localAuthority: "Chiltern", zones: "9", image: require("./images/Amersham.jpg"), opened: "1 September 1892", mainlineOpened: "", previousNames: "Amersham: 1892–1922 | Amersham & Chesham Bois: 1922–34"},
 {name: "Angel", lines: "Northern", localAuthority: "Islington", zones: "1", image: require("./images/Angel.jpg"), opened: "17 November 1901", mainlineOpened: "", previousNames: "None"},

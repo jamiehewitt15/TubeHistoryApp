@@ -13,12 +13,14 @@ export  default class Station extends React.Component {
           <View>
           <Card title={this.props.stationName} image={this.props.stationImage}>
        
-          
+          <Text style = {styles.subtitle}>Quick facts</Text>
           <Text>Lines: {this.props.stationLines} </Text>
           <Text>Zone: {this.props.stationZones} </Text>
           <Text>Opened: {this.props.stationOpened} </Text>
-          <Text>Local Authority: {this.props.stationLocalAuthority} </Text>
-          
+          <Text>Local Authority: {this.props.stationLocalAuthority}</Text>
+          <Text> </Text>
+          <Text style = {styles.bold}>Previous names</Text>
+          <Text >{this.props.stationPreviousNames} </Text>
           </Card>
 
 
@@ -31,3 +33,17 @@ export  default class Station extends React.Component {
   }
   
 };
+
+const styles = StyleSheet.create({
+  subtitle: {
+    
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  bold: {
+    
+    fontWeight: 'bold',
+   
+  },
+ 
+});
