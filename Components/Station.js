@@ -18,17 +18,7 @@ export  default class Station extends React.Component {
           <Text>Zone: {this.props.stationZones} </Text>
           <Text>Opened: {this.props.stationOpened} </Text>
           <Text>Local Authority: {this.props.stationLocalAuthority} </Text>
-          <Button title='MORE INFO'  
-          buttonStyle={{
-          backgroundColor: "rgba(92, 99,216, 1)",
-          width: 100,
-          height: 35,
-          borderColor: "transparent",
-          borderWidth: 0,
-          borderRadius: 5,
-          marginTop: 10,
-          marginLeft: 85
-  }} />
+          
           </Card>
 
 
