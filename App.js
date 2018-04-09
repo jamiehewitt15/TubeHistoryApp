@@ -41,6 +41,7 @@ export default class App extends React.Component {
                                     stationZones={this.state.stations[i].zones} 
                                     stationImage={this.state.stations[i].image}
                                     stationLocalAuthority={this.state.stations[i].localAuthority}
+                                    stationOpened={this.state.stations[i].opened}
                                     key={i}/>);
      
    }
