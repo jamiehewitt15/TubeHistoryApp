@@ -12,7 +12,9 @@ export  default class Station extends React.Component {
       return (
           <View>
           <Card title={this.props.stationName} image={this.props.stationImage}>
-       
+          <Text style = {styles.subtitle}>History</Text>
+          <Text>{this.props.stationHistory} </Text>
+          <Text> </Text>
           <Text style = {styles.subtitle}>Quick facts</Text>
           <Text>Lines: {this.props.stationLines} </Text>
           <Text>Zone: {this.props.stationZones} </Text>
@@ -38,7 +40,8 @@ const styles = StyleSheet.create({
   subtitle: {
     
     fontWeight: 'bold',
-    fontSize: 16,
+  /*  fontSize: 16,
+  */
   },
   bold: {
     

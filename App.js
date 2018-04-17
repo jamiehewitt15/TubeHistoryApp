@@ -37,6 +37,7 @@ export default class App extends React.Component {
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
      visible_stations.push(<Station stationName={this.state.stations[i].name} 
+                                    stationHistory={this.state.stations[i].history}
                                     stationLines={this.state.stations[i].lines} 
                                     stationZones={this.state.stations[i].zones} 
                                     stationImage={this.state.stations[i].image}
