@@ -52,15 +52,16 @@ export default class App extends React.Component {
    }
     
     return (
-      <ScrollView style={styles.container}>
+      <View style={{flex: 1}}>
       <StatusBar hidden />
         <SearchBar
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
             placeholder='Type Here...' />
+      <ScrollView style={styles.container}>
         {visible_stations}
       </ScrollView>
-      
+      </View>
     );
   }
   
@@ -72,7 +73,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#cccccc',
-    marginTop: 20
+    marginTop: 0,
+
     // alignItems: 'center',
     
   },
