@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
 
 
@@ -11,6 +11,7 @@ export  default class Station extends React.Component {
   render() {
       return (
           <View>
+          
           <Card title={this.props.stationName} image={this.props.stationImage}>
           <Text style = {styles.subtitle}>History</Text>
           <Text>{this.props.stationHistory} </Text>

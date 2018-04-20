@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, StatusBar} from 'react-native';
 import Station from'./Components/Station'
 import { SearchBar } from 'react-native-elements';
 
@@ -31,9 +31,12 @@ export default class App extends React.Component {
     
   }
   
+
   
   render() {
     
+    
+
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
      visible_stations.push(<Station stationName={this.state.stations[i].name} 
@@ -50,6 +53,7 @@ export default class App extends React.Component {
     
     return (
       <ScrollView style={styles.container}>
+      <StatusBar hidden />
         <SearchBar
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
