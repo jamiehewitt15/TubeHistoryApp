@@ -1,19 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, StatusBar} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert} from 'react-native';
 import Station from'./Components/Station'
-import { SearchBar } from 'react-native-elements';
+import { SearchBar, Button } from 'react-native-elements';
 
 import { STATIONS } from './tube_data';
 
+let x=10;
+
+
+
 
 export default class App extends React.Component {
+
+  loadMore() {
+      x+=10
+      }
+  }
   
   constructor(props) {
       super(props);
+
       this.state={
-        stations: STATIONS.slice(0, 20)
+        stations: STATIONS.slice(0, x)
       }
   }
+
+
   
   textChanged(search_word){
     var new_stations = [];
@@ -26,12 +38,10 @@ export default class App extends React.Component {
        
   }
   
-  
-  textCleared(){
+    textCleared(){
     
   }
   
-
   
   render() {
     
@@ -60,12 +70,20 @@ export default class App extends React.Component {
             placeholder='Type Here...' />
       <ScrollView style={styles.container}>
         {visible_stations}
+       
+        <Button 
+            onPress={this.loadMore.bind(this)}
+          title="Load More"
+        />
+        
       </ScrollView>
+      
       </View>
     );
   }
   
-  
+
+            
 
 }
 
@@ -78,4 +96,8 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     
   },
+  button: {
+    marginTop: 20,
+    marginBottom: 20,
+  }
 });
