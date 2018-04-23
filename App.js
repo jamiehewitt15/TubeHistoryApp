@@ -5,23 +5,27 @@ import { SearchBar, Button } from 'react-native-elements';
 
 import { STATIONS } from './tube_data';
 
-let x=10;
 
 
 
 
 export default class App extends React.Component {
-
+ 
   loadMore() {
-      x+=10
-      }
+      this.num_stations+=5;
+      console.log(this.num_stations);
+      this.setState({stations: STATIONS.slice(0, this.num_stations)});
+      
   }
+
   
   constructor(props) {
       super(props);
+      
+      this.num_stations = 5;
 
       this.state={
-        stations: STATIONS.slice(0, x)
+        stations: STATIONS.slice(0, this.num_stations)
       }
   }
 
@@ -46,6 +50,7 @@ export default class App extends React.Component {
   render() {
     
     
+   var showLoadMore = true;
 
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
@@ -60,6 +65,14 @@ export default class App extends React.Component {
                                     key={i}/>);
      
    }
+  if (visible_stations.length === 0){
+    visible_stations = (<View>
+      <Text>Sorry we don't have that station at the moment but more will be added in the next update!</Text>
+      <Button title="Reload"/>
+      </View>)
+    showLoadMore = false  
+  }
+  
     
     return (
       <View style={{flex: 1}}>
@@ -71,10 +84,13 @@ export default class App extends React.Component {
       <ScrollView style={styles.container}>
         {visible_stations}
        
-        <Button 
-            onPress={this.loadMore.bind(this)}
-          title="Load More"
-        />
+        
+        {showLoadMore && STATIONS.length > this.num_stations &&
+          <Button 
+              onPress={this.loadMore.bind(this)}
+              title="Load More"
+          />
+        }
         
       </ScrollView>
       
@@ -82,8 +98,8 @@ export default class App extends React.Component {
     );
   }
   
+  
 
-            
 
 }
 
