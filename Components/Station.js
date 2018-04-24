@@ -12,7 +12,7 @@ export  default class Station extends React.Component {
       return (
           <View>
           
-          <Card title={this.props.stationName} image={this.props.stationImage}>
+          <Card title={this.props.stationName.toUpperCase()} titleStyle={styles.title} image={this.props.stationImage} containerStyle={styles.card}>
           <Text style = {styles.subtitle}>History</Text>
           <Text>{this.props.stationHistory} </Text>
           <Text> </Text>
@@ -38,12 +38,23 @@ export  default class Station extends React.Component {
 };
 
 const styles = StyleSheet.create({
+  card: {
+      borderRadius: 10,
+
+        },
+
   subtitle: {
     
     fontWeight: 'bold',
   /*  fontSize: 16,
   */
   },
+  title: {
+    fontSize: 20,
+    fontWeight: '100',
+    color: '#eb4d47',
+  },
+
   bold: {
     
     fontWeight: 'bold',

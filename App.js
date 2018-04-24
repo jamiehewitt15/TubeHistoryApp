@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshControl} from 'react-native';
 import Station from'./Components/Station'
 import { SearchBar, Button } from 'react-native-elements';
 
@@ -18,11 +18,18 @@ export default class App extends React.Component {
       
   }
 
+  showTenStations() {
+      this.num_stations=10;
+      console.log(this.num_stations);
+      this.setState({stations: STATIONS.slice(0, this.num_stations)});
+      
+  }
+
   
   constructor(props) {
       super(props);
       
-      this.num_stations = 5;
+      this.num_stations = 10;
 
       this.state={
         stations: STATIONS.slice(0, this.num_stations)
@@ -54,6 +61,7 @@ export default class App extends React.Component {
 
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
+    if (this.state.stations[i].history.length > 0){
      visible_stations.push(<Station stationName={this.state.stations[i].name} 
                                     stationHistory={this.state.stations[i].history}
                                     stationLines={this.state.stations[i].lines} 
@@ -63,12 +71,14 @@ export default class App extends React.Component {
                                     stationOpened={this.state.stations[i].opened}
                                     stationPreviousNames={this.state.stations[i].previousNames}
                                     key={i}/>);
-     
+     }
    }
   if (visible_stations.length === 0){
-    visible_stations = (<View>
-      <Text>Sorry we don't have that station at the moment but more will be added in the next update!</Text>
-      <Button title="Reload"/>
+    visible_stations = (<View style={styles.buttoncontainer}>
+      <Text style={styles.text}>Sorry we don't have that station at the moment but more will be added in the next update!</Text>
+      <Button title="Reload"
+              onPress={this.showTenStations.bind(this)}
+              buttonStyle={styles.button}/>
       </View>)
     showLoadMore = false  
   }
@@ -78,6 +88,7 @@ export default class App extends React.Component {
       <View style={{flex: 1}}>
       <StatusBar hidden />
         <SearchBar
+            lightTheme
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
             placeholder='Type Here...' />
@@ -86,10 +97,14 @@ export default class App extends React.Component {
        
         
         {showLoadMore && STATIONS.length > this.num_stations &&
-          <Button 
+          <View style={styles.buttoncontainer}>
+            <Button 
               onPress={this.loadMore.bind(this)}
-              title="Load More"
-          />
+              title="Show More"
+              buttonStyle={styles.button}
+              
+             />
+          </View>
         }
         
       </ScrollView>
@@ -106,13 +121,32 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cccccc',
+    backgroundColor: '#99d1ff',
     marginTop: 0,
 
     // alignItems: 'center',
     
   },
   button: {
+    width: 100,
+    height: 35,
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: '#33A2FF',
+    borderWidth: 0,
+    borderRadius: 10,
+    
+  },
+  buttoncontainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  text: {
+    marginRight: 20,
+    marginLeft: 20,
     marginTop: 20,
     marginBottom: 20,
   }
