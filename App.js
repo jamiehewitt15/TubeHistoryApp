@@ -12,7 +12,7 @@ import { STATIONS } from './tube_data';
 export default class App extends React.Component {
  
   loadMore() {
-      this.num_stations+=5;
+      this.num_stations+=10;
       console.log(this.num_stations);
       this.setState({stations: STATIONS.slice(0, this.num_stations)});
       
@@ -61,7 +61,7 @@ export default class App extends React.Component {
 
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
-    if (this.state.stations[i].history.length > 0){
+    if (this.state.stations[i].history){
      visible_stations.push(<Station stationName={this.state.stations[i].name} 
                                     stationHistory={this.state.stations[i].history}
                                     stationLines={this.state.stations[i].lines} 

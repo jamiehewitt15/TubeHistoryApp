@@ -16,8 +16,9 @@ export  default class Station extends React.Component {
           <Text style = {styles.subtitle}>History</Text>
           <Text>{this.props.stationHistory} </Text>
           <Text> </Text>
+          <Text style = {styles.subtitle}>Lines</Text>
+          <Text>{this.props.stationLines} </Text>
           <Text style = {styles.subtitle}>Quick facts</Text>
-          <Text>Lines: {this.props.stationLines} </Text>
           <Text>Zone: {this.props.stationZones} </Text>
           <Text>Opened: {this.props.stationOpened} </Text>
           <Text>Local Authority: {this.props.stationLocalAuthority}</Text>
