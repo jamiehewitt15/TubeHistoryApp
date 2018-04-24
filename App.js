@@ -104,6 +104,7 @@ export default class App extends React.Component {
               buttonStyle={styles.button}
               
              />
+             <Text style={styles.footertext}>Please provide feedback and suggestions to: tubeapphistory@gmail.com</Text>
           </View>
         }
         
@@ -149,5 +150,9 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 20,
     marginBottom: 20,
+  },
+  footertext:{
+  textAlign: 'center',
+  marginBottom: 10,
   }
 });
