@@ -40,8 +40,9 @@ export  default class Station extends React.Component {
 
 const styles = StyleSheet.create({
   card: {
-      borderRadius: 10,
-      
+      borderRadius: 40,
+      borderWidth: 3,
+      borderColor: '#DD1F19',
 
         },
 
@@ -52,9 +53,12 @@ const styles = StyleSheet.create({
   */
   },
   title: {
+    marginLeft: 20,
+    marginRight: 20,
     fontSize: 20,
-    fontWeight: '100',
-    color: '#ff3b30',
+    fontWeight: 'bold',
+    color: '#ffffff',
+    backgroundColor: '#0012A9'
   },
 
   bold: {

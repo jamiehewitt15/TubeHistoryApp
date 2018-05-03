@@ -122,15 +122,15 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#5ac8fa',
+    backgroundColor: '#cdcbcb',
     marginTop: 0,
 
     // alignItems: 'center',
     
   },
   button: {
-    width: 150,
-    height: 50,
+    width: 140,
+    height: 40,
     marginTop: 20,
     marginBottom: 20,
     backgroundColor: '#33A2FF',
