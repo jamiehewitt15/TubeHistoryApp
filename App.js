@@ -29,7 +29,7 @@ export default class App extends React.Component {
   constructor(props) {
       super(props);
       
-      this.num_stations = 10;
+      this.num_stations = 30;
 
       this.state={
         stations: STATIONS.slice(0, this.num_stations)
