@@ -12,14 +12,14 @@ import { STATIONS } from './tube_data';
 export default class App extends React.Component {
  
   loadMore() {
-      this.num_stations+=10;
+      this.num_stations+=30;
       console.log(this.num_stations);
       this.setState({stations: STATIONS.slice(0, this.num_stations)});
       
   }
 
   showTenStations() {
-      this.num_stations=10;
+      this.num_stations=30;
       console.log(this.num_stations);
       this.setState({stations: STATIONS.slice(0, this.num_stations)});
       
