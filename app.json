@@ -4,7 +4,7 @@
    "expo": {
     "name": "Tube History",
     "icon": "./logo.png",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "slug": "tube-app",
     "sdkVersion": "25.0.0",
     "ios": {
