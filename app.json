@@ -11,7 +11,8 @@
       "bundleIdentifier": "com.jamiehewitt.tubehistory"
     },
     "android": {
-      "package": "com.jamiehewitt.tubehistory"
+      "package": "com.jamiehewitt.tubehistory",
+       "versionCode": 2
     }
    }
  }
