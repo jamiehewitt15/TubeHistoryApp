@@ -31,12 +31,12 @@ export default class App extends React.Component {
   if(this.state.searchStatus == true)
   {
     this.setState({searchStatus: false});
-    console.log(this.searchStatus)
+    console.log(this.searchStatus);
   }
   else
   {
     this.setState({searchStatus: true});
-    console.log(this.searchStatus)
+    console.log(this.searchStatus);
   }
 }
 
@@ -45,11 +45,13 @@ export default class App extends React.Component {
       super(props);
       
       this.num_stations = 30;
+      this.searchStatus = false;
 
       this.state={
-        stations: STATIONS.slice(0, this.num_stations);
-        searchStatus:false
-      }
+        stations: STATIONS.slice(0, this.num_stations)
+        
+      };
+
   }
 
 
@@ -106,16 +108,16 @@ export default class App extends React.Component {
       <Header
           leftComponent={{ icon: 'menu', color: '#fff', onPress: () => alert('You pressed menu') }}
           centerComponent={{ text: 'TUBE HISTORY', style: { color: '#fff', fontWeight: 'bold'} }}
-          rightComponent={{ icon: 'search', color: '#fff', fontSize: 20, onPress: () => this.ShowHideSearchComponentView }}
+          rightComponent={{ icon: 'search', color: '#fff', fontSize: 20, onPress: () => {this.ShowHideSearchComponentView.bind(this)} }}
           outerContainerStyles={{ marginTop: -10 }}
           backgroundColor="#0012A9"
       />
       
-        <SearchBar
+        this.state.searchStatus ? <SearchBar
             lightTheme
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
-            placeholder='Type Here...' />
+            placeholder='Type Here...' /> : null
       
       <ScrollView style={styles.container}>
         {visible_stations}
