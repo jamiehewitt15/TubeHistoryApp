@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshControl} from 'react-native';
-import Station from'./Components/Station'
-import { SearchBar, Button } from 'react-native-elements';
+import Station from'./Components/Station';
+import { SearchBar, Button, Header } from 'react-native-elements';
 
 import { STATIONS } from './tube_data';
 
@@ -25,6 +25,21 @@ export default class App extends React.Component {
       
   }
 
+  ShowHideSearchComponentView() {
+        
+ 
+  if(this.state.searchStatus == true)
+  {
+    this.setState({searchStatus: false});
+    console.log(this.searchStatus)
+  }
+  else
+  {
+    this.setState({searchStatus: true});
+    console.log(this.searchStatus)
+  }
+}
+
   
   constructor(props) {
       super(props);
@@ -32,7 +47,8 @@ export default class App extends React.Component {
       this.num_stations = 30;
 
       this.state={
-        stations: STATIONS.slice(0, this.num_stations)
+        stations: STATIONS.slice(0, this.num_stations);
+        searchStatus:false
       }
   }
 
@@ -87,11 +103,20 @@ export default class App extends React.Component {
     return (
       <View style={{flex: 1}}>
       <StatusBar hidden />
+      <Header
+          leftComponent={{ icon: 'menu', color: '#fff', onPress: () => alert('You pressed menu') }}
+          centerComponent={{ text: 'TUBE HISTORY', style: { color: '#fff', fontWeight: 'bold'} }}
+          rightComponent={{ icon: 'search', color: '#fff', fontSize: 20, onPress: () => this.ShowHideSearchComponentView }}
+          outerContainerStyles={{ marginTop: -10 }}
+          backgroundColor="#0012A9"
+      />
+      
         <SearchBar
             lightTheme
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
             placeholder='Type Here...' />
+      
       <ScrollView style={styles.container}>
         {visible_stations}
        
