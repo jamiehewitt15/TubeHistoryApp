@@ -25,9 +25,10 @@ export default class App extends React.Component {
       
   }
 
+///Here I'm trying to create a method for showing or hiding the search bar. I'm fairly certain this is where it's going wrong because when I run it on it's own (without the if statement below),
+/// I can click on the search button but nothing logs to the console.
   ShowHideSearchComponentView() {
-        
- 
+         
   if(this.state.searchStatus == true)
   {
     this.setState({searchStatus: false});
@@ -40,7 +41,8 @@ export default class App extends React.Component {
   }
 }
 
-  
+///There could also be a problem with how I've defined the variable in the constructor.
+
   constructor(props) {
       super(props);
       
@@ -105,6 +107,7 @@ export default class App extends React.Component {
     return (
       <View style={{flex: 1}}>
       <StatusBar hidden />
+    {/* COMMENT: this header section  is taken from react native elements and is working fine, although there may be a problem with the onPress */}
       <Header
           leftComponent={{ icon: 'menu', color: '#fff', onPress: () => alert('You pressed menu') }}
           centerComponent={{ text: 'TUBE HISTORY', style: { color: '#fff', fontWeight: 'bold'} }}
@@ -112,7 +115,8 @@ export default class App extends React.Component {
           outerContainerStyles={{ marginTop: -10 }}
           backgroundColor="#0012A9"
       />
-      
+      {/* COMMENT: This is me trying to write an if statement based on the variable searchStatus, I got the syntax online but I'm not sure if it's correct. 
+                   If you remove the if statement the app works again and you'll see the header */}
         this.state.searchStatus ? <SearchBar
             lightTheme
             onChangeText={this.textChanged.bind(this)}
