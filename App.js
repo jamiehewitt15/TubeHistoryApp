@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshControl} from 'react-native';
 import Station from'./Components/Station';
 import { SearchBar, Button, Header } from 'react-native-elements';
-import PinchZoomView from 'react-native-pinch-zoom-view';
 import { STATIONS } from './tube_data';
 
 
