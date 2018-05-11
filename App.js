@@ -8,7 +8,6 @@ import { STATIONS } from './tube_data';
 
 
 
-
 export default class App extends React.Component {
  
   loadMore() {
@@ -27,34 +26,51 @@ export default class App extends React.Component {
 
 ///Here I'm trying to create a method for showing or hiding the search bar. I'm fairly certain this is where it's going wrong because when I run it on it's own (without the if statement below),
 /// I can click on the search button but nothing logs to the console.
-  ShowHideSearchComponentView() {
-         
-  if(this.state.searchStatus == true)
-  {
-    this.setState({searchStatus: false});
-    console.log(this.searchStatus);
-  }
-  else
-  {
-    this.setState({searchStatus: true});
-    console.log(this.searchStatus);
-  }
-}
+
 
 ///There could also be a problem with how I've defined the variable in the constructor.
 
   constructor(props) {
       super(props);
+       
+        
       
       this.num_stations = 30;
-      this.searchStatus = false;
-
-      this.state={
-        stations: STATIONS.slice(0, this.num_stations)
+      
         
+      this.state={
+        stations: STATIONS.slice(0, this.num_stations),
+        searchStatus: false,
+        menuStatus: false,
       };
 
   }
+
+ShowHideSearch() {
+         if(this.state.searchStatus == true)
+        {
+          this.setState({searchStatus: false});
+          console.log(this.searchStatus);
+        }
+          else
+          {
+            this.setState({searchStatus: true});
+            console.log(this.searchStatus);
+          }
+        }
+
+ShowHideMenu() {
+         if(this.state.menuStatus == true)
+        {
+          this.setState({menuStatus: false});
+          console.log(this.menuStatus);
+        }
+          else
+          {
+            this.setState({menuStatus: true});
+            console.log(this.menuStatus);
+          }
+        }
 
 
   
@@ -106,22 +122,30 @@ export default class App extends React.Component {
     
     return (
       <View style={{flex: 1}}>
+      
       <StatusBar hidden />
-    {/* COMMENT: this header section  is taken from react native elements and is working fine, although there may be a problem with the onPress */}
+   
       <Header
-          leftComponent={{ icon: 'menu', color: '#fff', onPress: () => alert('You pressed menu') }}
+          leftComponent={{ icon: 'menu', color: '#fff',  underlayColor: "#0012A9", onPress: this.ShowHideMenu.bind(this) }}
           centerComponent={{ text: 'TUBE HISTORY', style: { color: '#fff', fontWeight: 'bold'} }}
-          rightComponent={{ icon: 'search', color: '#fff', fontSize: 20, onPress: () => {this.ShowHideSearchComponentView.bind(this)} }}
-          outerContainerStyles={{ marginTop: -10 }}
+          rightComponent={{ icon: 'search', color: '#fff', fontSize: 20, underlayColor: "#0012A9", onPress: this.ShowHideSearch.bind(this) }}
+          outerContainerStyles={{ marginTop: -10, marginBottom: -5 }}
           backgroundColor="#0012A9"
       />
-      {/* COMMENT: This is me trying to write an if statement based on the variable searchStatus, I got the syntax online but I'm not sure if it's correct. 
-                   If you remove the if statement the app works again and you'll see the header */}
-        this.state.searchStatus ? <SearchBar
+
+      { this.state.menuStatus ? <View style={{backgroundColor: "#0012A9"}}>
+      <Text style={{flex: 1}}>Menu</Text>
+          <Text style={styles.menuitem}>Tube Stations </Text>
+          <Text style={styles.menuitem}>DLR Stations </Text>
+          <Text style={styles.menuitem}>Map </Text>
+          
+      </View> : null }
+      
+       { this.state.searchStatus ? <SearchBar
             lightTheme
             onChangeText={this.textChanged.bind(this)}
             onClear={this.textCleared}
-            placeholder='Type Here...' /> : null
+            placeholder='Type Here...' /> : null }
       
       <ScrollView style={styles.container}>
         {visible_stations}
@@ -140,7 +164,7 @@ export default class App extends React.Component {
         }
         
       </ScrollView>
-      
+
       </View>
     );
   }
@@ -185,5 +209,12 @@ const styles = StyleSheet.create({
   footertext:{
   textAlign: 'center',
   marginBottom: 10,
+  },
+  menuitem:{
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 10,
+    fontSize: 15,
+    color: '#ffffff',
   }
 });
