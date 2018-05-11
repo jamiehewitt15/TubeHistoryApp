@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshControl} from 'react-native';
 import Station from'./Components/Station';
 import { SearchBar, Button, Header } from 'react-native-elements';
-
+import PinchZoomView from 'react-native-pinch-zoom-view';
 import { STATIONS } from './tube_data';
 
 
@@ -42,6 +42,7 @@ export default class App extends React.Component {
         stations: STATIONS.slice(0, this.num_stations),
         searchStatus: false,
         menuStatus: false,
+        mapStatus: false,
       };
 
   }
@@ -72,6 +73,18 @@ ShowHideMenu() {
           }
         }
 
+ShowMap() {
+         
+          this.setState({mapStatus: true});
+          console.log(this.mapStatus);
+        }
+
+HideMap() {
+         
+          this.setState({mapStatus: false});
+          console.log(this.mapStatus);
+        }
+          
 
   
   textChanged(search_word){
@@ -133,13 +146,18 @@ ShowHideMenu() {
           backgroundColor="#0012A9"
       />
 
-      { this.state.menuStatus ? <View style={{backgroundColor: "#0012A9"}}>
+      { this.state.menuStatus ? <View style={{backgroundColor: "#0012A9", paddingBottom: 5}}>
       <Text style={{flex: 1}}>Menu</Text>
-          <Text style={styles.menuitem}>Tube Stations </Text>
-          <Text style={styles.menuitem}>DLR Stations </Text>
-          <Text style={styles.menuitem}>Map </Text>
+          <Text style={styles.menuitem} onPress={ this.HideMap.bind(this)}>Tube Stations </Text>
+          <Text style={styles.menuitem} onPress={ this.ShowMap.bind(this)}>Map </Text>
           
       </View> : null }
+      { this.state.mapStatus ? <ScrollView style={{backgroundColor: "#fff", paddingBottom: 200}} ><ScrollView horizontal>
+       
+        <Image
+          source={require("./images/tubemap.jpg")}
+        />  
+        </ScrollView></ScrollView> : null }
       
        { this.state.searchStatus ? <SearchBar
             lightTheme
@@ -213,7 +231,7 @@ const styles = StyleSheet.create({
   menuitem:{
     paddingTop: 5,
     paddingBottom: 5,
-    paddingLeft: 10,
+    paddingLeft: 20,
     fontSize: 15,
     color: '#ffffff',
   }
