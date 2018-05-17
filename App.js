@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshControl} from 'react-native';
-import Station from'./Components/Station';
+import TubeStation from'./Components/TubeStations';
+import DLRStation from'./Components/DLRStations';
 import { SearchBar, Button, Header } from 'react-native-elements';
-import { STATIONS } from './tube_data';
+import { STATIONS } from './datafiles/tube_data.js';
+import { DLRSTATIONS } from './datafiles/dlr_data.js';
 
 
 
@@ -11,14 +13,14 @@ export default class App extends React.Component {
  
   loadMore() {
       this.num_stations+=30;
-      console.log(this.num_stations);
+      
       this.setState({stations: STATIONS.slice(0, this.num_stations)});
       
   }
 
   showTenStations() {
       this.num_stations=30;
-      console.log(this.num_stations);
+      
       this.setState({stations: STATIONS.slice(0, this.num_stations)});
       
   }
@@ -35,9 +37,12 @@ export default class App extends React.Component {
         
       this.state={
         stations: STATIONS.slice(0, this.num_stations),
+        dlrstations: DLRSTATIONS.slice(0, this.num_stations),
         searchStatus: false,
         menuStatus: false,
         mapStatus: false,
+        tubeStatus: true,
+        dlrStatus: false,
       };
 
   }
@@ -46,12 +51,12 @@ ShowHideSearch() {
          if(this.state.searchStatus == true)
         {
           this.setState({searchStatus: false});
-          console.log(this.searchStatus);
+          
         }
           else
           {
             this.setState({searchStatus: true});
-            console.log(this.searchStatus);
+            
           }
         }
 
@@ -64,20 +69,31 @@ ShowHideMenu() {
           else
           {
             this.setState({menuStatus: true});
-            console.log(this.menuStatus);
+            
           }
         }
+
+showTube() {
+          this.setState({tubeStatus: true});
+         console.log(this.state.tubeStatus) 
+        }
+
+showDLR() {
+          this.setState({tubeStatus: false});
+          console.log(this.state.tubeStatus) 
+        }
+
 
 ShowMap() {
          
           this.setState({mapStatus: true});
-          console.log(this.mapStatus);
+          
         }
 
 HideMap() {
          
           this.setState({mapStatus: false});
-          console.log(this.mapStatus);
+         
         }
           
 
@@ -105,11 +121,12 @@ textChanged(search_word){
     
     
    var showLoadMore = true;
-
+ 
+ if(this.state.tubeStatus === true){ 
    var visible_stations = []
    for (var i = 0; i < this.state.stations.length; i++) {
     if (this.state.stations[i].history){
-     visible_stations.push(<Station stationName={this.state.stations[i].name} 
+     visible_stations.push(<TubeStation stationName={this.state.stations[i].name} 
                                     stationHistory={this.state.stations[i].history}
                                     stationLines={this.state.stations[i].lines} 
                                     stationZones={this.state.stations[i].zones} 
@@ -118,8 +135,28 @@ textChanged(search_word){
                                     stationOpened={this.state.stations[i].opened}
                                     stationPreviousNames={this.state.stations[i].previousNames}
                                     key={i}/>);
-     }
-   }
+                                        }
+                                                        }
+
+} else {
+    var visible_stations = []
+    for (var i = 0; i < this.state.dlrstations.length; i++) {
+    if (this.state.dlrstations[i].history){
+     visible_stations.push(<DLRStation stationName={this.state.dlrstations[i].name} 
+                                    stationHistory={this.state.dlrstations[i].history}
+                                    stationZones={this.state.dlrstations[i].zones} 
+                                    stationImage={this.state.dlrstations[i].image}
+                                    stationLocalAuthority={this.state.dlrstations[i].localAuthority}
+                                    stationOpened={this.state.dlrstations[i].opened}
+                                    key={i}/>);
+                                        }
+                                                        }
+
+}
+
+  
+
+
   if (visible_stations.length === 0){
     visible_stations = (<View style={styles.buttoncontainer}>
       <Text style={styles.text}>Sorry we don't have that station at the moment but more will be added in the next update!</Text>
@@ -146,7 +183,8 @@ textChanged(search_word){
 
       { this.state.menuStatus ? <View style={{backgroundColor: "#0012A9", paddingBottom: 5}}>
       <Text style={{flex: 1}}>Menu</Text>
-          <Text style={styles.menuitem} onPress={ this.HideMap.bind(this)}>Tube Stations </Text>
+          <Text style={styles.menuitem} onPress={ this.HideMap.bind(this), this.showTube.bind(this)}>Tube Stations </Text>
+          <Text style={styles.menuitem} onPress={ this.HideMap.bind(this), this.showDLR.bind(this)}>DLR Stations </Text>
           <Text style={styles.menuitem} onPress={ this.ShowMap.bind(this)}>Map </Text>
           
       </View> : null }
