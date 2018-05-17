@@ -23,11 +23,7 @@ export default class App extends React.Component {
       
   }
 
-///Here I'm trying to create a method for showing or hiding the search bar. I'm fairly certain this is where it's going wrong because when I run it on it's own (without the if statement below),
-/// I can click on the search button but nothing logs to the console.
 
-
-///There could also be a problem with how I've defined the variable in the constructor.
 
   constructor(props) {
       super(props);
@@ -86,10 +82,13 @@ HideMap() {
           
 
   
-  textChanged(search_word){
+textChanged(search_word){
     var new_stations = [];
     for (var i = 0; i < STATIONS.length; i++) {
-      if (STATIONS[i].name.toLowerCase().indexOf(search_word.toLowerCase()) == 0) {
+      var possible_station = STATIONS[i].name.toLowerCase().trim().replace("'","").replace("'","").replace(".","") ;
+      search_word = search_word.toLowerCase().trim().replace("'","").replace("'","").replace(".","");
+      
+      if (possible_station.indexOf(search_word) == 0) {
          new_stations.push(STATIONS[i])
       }
     }
