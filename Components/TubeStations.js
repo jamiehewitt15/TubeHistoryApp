@@ -14,17 +14,17 @@ export  default class TubeStation extends React.Component {
           
           <Card title={this.props.stationName.toUpperCase()} titleStyle={styles.title} image={this.props.stationImage} containerStyle={styles.card}>
           <Text style = {styles.subtitle}>History</Text>
-          <Text>{this.props.stationHistory} </Text>
+          <Text style = {styles.body}>{this.props.stationHistory} </Text>
           <Text> </Text>
           <Text style = {styles.subtitle}>Lines</Text>
-          <Text>{this.props.stationLines} </Text>
+          <Text style = {styles.body}>{this.props.stationLines} </Text>
           <Text style = {styles.subtitle}>Quick facts</Text>
-          <Text>Zone: {this.props.stationZones} </Text>
-          <Text>Opened: {this.props.stationOpened} </Text>
-          <Text>Local Authority: {this.props.stationLocalAuthority}</Text>
+          <Text style = {styles.body}>Zone: {this.props.stationZones} </Text>
+          <Text style = {styles.body}>Opened: {this.props.stationOpened} </Text>
+          <Text style = {styles.body}>Local Authority: {this.props.stationLocalAuthority}</Text>
           <Text> </Text>
           <Text style = {styles.bold}>Previous names</Text>
-          <Text >{this.props.stationPreviousNames} </Text>
+          <Text style = {styles.body}>{this.props.stationPreviousNames} </Text>
           </Card>
 
 
@@ -45,17 +45,22 @@ const styles = StyleSheet.create({
       borderColor: '#DD1F19',
 
         },
-
+body: {
+    
+    fontSize: 16,
+    lineHeight: 20,
+  },
   subtitle: {
     
     fontWeight: 'bold',
-  /*  fontSize: 16,
-  */
+    fontSize: 16,
+
+  
   },
   title: {
     marginLeft: 20,
     marginRight: 20,
-    fontSize: 20,
+    fontSize: 21,
     fontWeight: 'bold',
     color: '#ffffff',
     backgroundColor: '#0012A9'

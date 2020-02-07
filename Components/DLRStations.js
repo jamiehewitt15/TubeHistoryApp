@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   card: {
       borderRadius: 40,
       borderWidth: 3,
-      borderColor: '#DD1F19',
+      borderColor: '#00A4A7',
 
         },
 
@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
   title: {
     marginLeft: 20,
     marginRight: 20,
-    fontSize: 20,
+    fontSize: 21,
     fontWeight: 'bold',
     color: '#ffffff',
-    backgroundColor: '#0012A9'
+    backgroundColor: '#004894'
   },
 
   bold: {

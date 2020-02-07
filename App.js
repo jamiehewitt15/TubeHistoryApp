@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView, Image, StatusBar, Alert, RefreshCon
 import TubeStation from'./Components/TubeStations';
 import DLRStation from'./Components/DLRStations';
 import { SearchBar, Button, Header } from 'react-native-elements';
-import { STATIONS } from './datafiles/tube_data.js';
+//import { STATIONS } from './datafiles/tube_data.js';
 import { DLRSTATIONS } from './datafiles/dlr_data.js';
 
 
